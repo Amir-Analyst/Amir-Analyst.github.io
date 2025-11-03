@@ -5,7 +5,11 @@ BlueMart Retail LLC is a mid-sized UAE retail and e-commerce chain established i
 Stakeholder : Mr. Adil Khan – Head of Sales & Digital Transformation at BlueMart. 
 
 Objectives: 
+
 • Build an integrated dashboard linking retail and e-commerce KPIs. 
+
 • Measure sales performance, customer retention, marketing ROI, and inventory turnover. 
+
 • Detect regional demand trends and seasonality (Ramadan, Eid, tourist months) in UAE. 
+
 • Forecast upcoming month sales and stock requirements. Dataset:
