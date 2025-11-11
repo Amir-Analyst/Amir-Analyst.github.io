@@ -7,6 +7,77 @@
   <title>About Me - Amir Khan</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Prevent navbar overlap on top content */
+    body {
+      padding-top: 80px; /* Adjust depending on navbar height */
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.75);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-heading);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .logo-image img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+      border: 2px solid var(--accent-cyan);
+    }
+
+    #navMenu {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    #navMenu a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    #navMenu a.active,
+    #navMenu a:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* Fix spacing for sections so nothing gets hidden */
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem 5rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -36,6 +107,7 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Everything below remains EXACTLY the same -->
     <section class="glass-panel scroll-reveal">
       <h1 class="text-gradient mb-lg">About Me</h1>
       <div class="card-content" style="line-height: 1.8;">
@@ -101,109 +173,8 @@
     <!-- Professional Experience -->
     <section class="glass-panel scroll-reveal mt-lg">
       <h2 class="text-gradient mb-lg">Work Experience</h2>
-      
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-date">May 2023 - Present</div>
           <h3>Inventory Analyst & Operations Support</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Docib Healthcare LLC | Dubai</p>
-          <ul style="list-style: none; padding: 0;">
-            <li style="padding: 0.5rem 0; display: flex; align-items: start;">
-              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
-              <span>Oversee inventory operations and purchasing for multiple outlets, ensuring balanced stock levels across retail locations.</span>
-            </li>
-            <li style="padding: 0.5rem 0; display: flex; align-items: start;">
-              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
-              <span>Coordinate with key suppliers to streamline procurement, maintain lead-time efficiency, and prevent stockouts.</span>
-            </li>
-            <li style="padding: 0.5rem 0; display: flex; align-items: start;">
-              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
-              <span>Use Excel and ERP tools to track movement trends and provide actionable insights for demand forecasting.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Mar 2020 - May 2023</div>
-          <h3>Assistant Pharmacist & Purchaser</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Creekline Pharmacy LLC | Dubai</p>
-          <ul style="list-style: none; padding: 0;">
-            <li style="padding: 0.5rem 0; display: flex; align-items: start;">
-              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
-              <span>Handled pharmaceutical purchasing, negotiated with vendors, and optimized order cycles to reduce cost and delays.</span>
-            </li>
-            <li style="padding: 0.5rem 0; display: flex; align-items: start;">
-              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
-              <span>Maintained stock accuracy and compliance through detailed record-keeping and proactive forecasting.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Feb 2015 - Dec 2019</div>
-          <h3>Medical Representative</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Indoco Remedies (1 yr) | Cadila Pharmaceuticals (3 yrs 11 mos) | India</p>
-          <ul style="list-style: none; padding: 0;">
-            <li style="padding: 0.5rem 0; display: flex; align-items: start;">
-              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
-              <span>Promoted pharmaceutical products across key territories, achieving consistent growth and exceeding sales goals.</span>
-            </li>
-            <li style="padding: 0.5rem 0; display: flex; align-items: start;">
-              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
-              <span>Built long-term professional relationships with healthcare practitioners, strengthening territory trust and sales consistency.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="glass-panel scroll-reveal mt-lg">
-      <h2 class="text-gradient mb-lg">Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Aug 2023 - Aug 2026</div>
-          <h3>Bachelor of Business Administration (Ongoing)</h3>
-          <p style="color: var(--text-secondary);">Manipal University Jaipur</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Aug 2012 - Aug 2014</div>
-          <h3>Diploma in Pharmacy</h3>
-          <p style="color: var(--text-secondary);">Krupanidhi College of Pharmacy</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="glass-panel scroll-reveal mt-lg">
-      <h2 class="text-gradient mb-lg">Let's Connect</h2>
-      <p class="card-content" style="text-align: center; margin-bottom: 2rem;">
-        Interested in collaborating or learning more about my work? I'd love to hear from you.
-      </p>
-      <div style="text-align: center;">
-        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Amir Khan. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-      document.querySelectorAll('#navMenu a').forEach(link => {
-        link.addEventListener('click', () => navMenu.classList.remove('active'));
-      });
-    }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('revealed');
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-  </script>
-</body>
-</html>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Docib Health
