@@ -7,6 +7,12 @@
   <title>Projects - Amir Khan</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Offset for fixed nav to prevent header overlap */
+    main {
+      padding-top: 80px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -14,7 +20,7 @@
     <div class="nav-container">
       <a href="index.html" class="logo">
         <div class="logo-image">
-          <img src="assets/images/20141.jpg" alt="Amir Khan">
+          <img src="assets/images/profile.jpg" alt="Amir Khan">
         </div>
         <span>Amir Khan</span>
       </a>
@@ -26,7 +32,7 @@
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="certificates.html">Certificates</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -36,17 +42,30 @@
 
   <!-- Main Content -->
   <main>
-    <section class="scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
+    <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
       <h1 class="text-gradient mb-sm">My Projects</h1>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-        Projects section will be updated soon as I complete my data analytics and AI projects.
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.8;">
+        This section showcases my journey of learning and applying analytics — starting with my first self-initiated project, <strong>BlueMart Retail Analytics</strong>, where I created a synthetic omnichannel retail dataset to analyze sales, inventory, and operational performance.
       </p>
     </section>
 
+    <section class="glass-panel scroll-reveal" style="padding: 4rem 2rem; text-align: center;">
+      <h2 style="color: var(--accent-cyan); margin-bottom: 1rem;">BlueMart Retail Analytics</h2>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem; line-height: 1.8;">
+        This is my ongoing data analytics project focused on simulating a UAE-based omnichannel retail business.  
+        I designed the synthetic dataset myself to study <strong>sales forecasting, channel efficiency,</strong> and <strong>inventory optimization</strong>.  
+        The project emphasizes business-oriented insights, exploratory data analysis, and actionable recommendations — bridging operational understanding with AI-driven analytics.
+      </p>
+      <div style="text-align: center;">
+        <a href="contact.html" class="btn btn-primary">Discuss This Project</a>
+      </div>
+    </section>
+
     <section class="glass-panel scroll-reveal" style="text-align: center; padding: 4rem 2rem;">
-      <h2 style="color: var(--text-heading); margin-bottom: 1rem;">Coming Soon</h2>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 500px; margin: 0 auto;">
-        I'm currently working on exciting data analytics and AI projects. Check back soon to see my portfolio of data-driven solutions!
+      <h2 style="color: var(--text-heading); margin-bottom: 1rem;">More Projects Coming Soon</h2>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 500px; margin: 0 auto; line-height: 1.8;">
+        I'm expanding my portfolio with AI and business analytics projects that transform data into decision intelligence.  
+        New case studies and dashboards will be published here as I complete them.
       </p>
     </section>
   </main>
@@ -74,6 +93,7 @@
       });
     }
 
+    // Scroll reveal animation
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
