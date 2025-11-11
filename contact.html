@@ -9,17 +9,91 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     main { padding-top: 80px; }
+
+    /* Contact grid layout */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
       padding: 0 2rem;
     }
+
     .contact-card h2 {
       margin-bottom: 1rem;
     }
+
     .contact-card p { line-height: 1.6; }
+
+    /* Enhanced form styling */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(0, 224, 255, 0.2);
+      background: rgba(255,255,255,0.05);
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: border 0.3s ease, background 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 1px solid var(--accent-cyan);
+      background: rgba(0,224,255,0.05);
+      outline: none;
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    /* Icon circle styling */
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .contact-info-text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-heading);
+    }
+
+    .contact-info-text a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.95rem;
+      word-break: break-all;
+    }
   </style>
 </head>
 <body>
@@ -44,6 +118,7 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Intro -->
     <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
       <h1 class="text-gradient mb-sm">Let’s Connect</h1>
       <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.8;">
@@ -52,26 +127,28 @@
       </p>
     </section>
 
+    <!-- Contact Grid -->
     <div class="contact-grid">
+
       <!-- Contact Form -->
       <section class="glass-panel contact-card scroll-reveal">
         <h2 class="text-gradient mb-md">Send Me a Message</h2>
         <form class="contact-form" action="#" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
+            <input type="text" id="subject" name="subject" placeholder="Brief topic" required>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
         </form>
@@ -83,36 +160,39 @@
       <!-- Contact Info -->
       <section class="glass-panel contact-card scroll-reveal">
         <h2 class="text-gradient mb-md">Reach Me Directly</h2>
-        <div style="margin-bottom: 2rem;">
-          <div style="display:flex; align-items:start; margin-bottom:1.5rem;">
-            <div class="social-icon" style="margin-right:1rem;"><svg ...></svg></div>
-            <div>
-              <h3 style="color: var(--text-heading); margin-bottom:0.25rem;">Email</h3>
-              <a href="mailto:amirmailforbusiness@gmail.com" style="color: var(--accent-cyan); text-decoration:none;">amirmailforbusiness@gmail.com</a>
-            </div>
-          </div>
-          <div style="display:flex; align-items:start; margin-bottom:1.5rem;">
-            <div class="social-icon" style="margin-right:1rem;"><svg ...></svg></div>
-            <div>
-              <h3 style="color: var(--text-heading); margin-bottom:0.25rem;">Phone</h3>
-              <a href="tel:+971547214232" style="color: var(--accent-cyan); text-decoration:none;">+971 54 721 4232</a>
-            </div>
-          </div>
-          <div style="display:flex; align-items:start; margin-bottom:1.5rem;">
-            <div class="social-icon" style="margin-right:1rem;"><svg ...></svg></div>
-            <div>
-              <h3 style="color: var(--text-heading); margin-bottom:0.25rem;">LinkedIn</h3>
-              <a href="https://linkedin.com/in/amir-khan-hussain" target="_blank" style="color: var(--accent-cyan); text-decoration:none;">linkedin.com/in/amir-khan-hussain</a>
-            </div>
-          </div>
-          <div style="display:flex; align-items:start; margin-bottom:1.5rem;">
-            <div class="social-icon" style="margin-right:1rem;"><svg ...></svg></div>
-            <div>
-              <h3 style="color: var(--text-heading); margin-bottom:0.25rem;">GitHub</h3>
-              <a href="https://github.com/Amir-Analyst" target="_blank" style="color: var(--accent-cyan); text-decoration:none;">github.com/Amir-Analyst</a>
-            </div>
+        
+        <div class="contact-info-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info-text">
+            <h3>Email</h3>
+            <a href="mailto:amirmailforbusiness@gmail.com">amirmailforbusiness@gmail.com</a>
           </div>
         </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info-text">
+            <h3>Phone</h3>
+            <a href="tel:+971547214232">+971 54 721 4232</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-info-text">
+            <h3>LinkedIn</h3>
+            <a href="https://linkedin.com/in/amir-khan-hussain" target="_blank">linkedin.com/in/amir-khan-hussain</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">🐙</div>
+          <div class="contact-info-text">
+            <h3>GitHub</h3>
+            <a href="https://github.com/Amir-Analyst" target="_blank">github.com/Amir-Analyst</a>
+          </div>
+        </div>
+
         <div style="padding:1.5rem; background: rgba(0,224,255,0.05); border-radius:var(--radius-md); border:1px solid rgba(0,224,255,0.2);">
           <p style="color: var(--text-primary); line-height:1.6;">
             <strong>Availability:</strong> Open to collaborating on AI, analytics, and business process optimization projects.  
@@ -120,6 +200,7 @@
           </p>
         </div>
       </section>
+
     </div>
 
     <!-- Call to Action -->
@@ -130,9 +211,9 @@
       </p>
       <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
         <a href="https://linkedin.com/in/amir-khan-hussain" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
-        <a href="assets/pdf/Amir_Khan_Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
       </div>
     </section>
+
   </main>
 
   <footer>
