@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,117 @@
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    /* Offset for fixed nav to prevent header overlap */
     main {
       padding-top: 80px;
     }
+
+    .featured-tag {
+      display: inline-block;
+      background: var(--gradient-primary);
+      color: var(--bg-primary);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(0, 224, 255, 0.2);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .metric-card:hover {
+      background: rgba(0, 224, 255, 0.05);
+      border-color: var(--accent-cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 224, 255, 0.15);
+    }
+
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .insight-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--accent-cyan);
+    }
+
+    .insight-card h3 {
+      color: var(--accent-cyan);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+
+    .tech-badge {
+      background: rgba(0, 224, 255, 0.1);
+      color: var(--accent-cyan);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid rgba(0, 224, 255, 0.3);
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
   </style>
 </head>
+
 <body>
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-image">
-          <img src="assets/images/profile.jpg" alt="Amir Khan">
-        </div>
+        <div class="logo-image"><img src="assets/images/profile.jpg" alt="Amir Khan"></div>
         <span>Amir Khan</span>
       </a>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -42,30 +133,152 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Page Intro -->
     <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
-      <h1 class="text-gradient mb-sm">My Projects</h1>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.8;">
-        This section showcases my journey of learning and applying analytics — starting with my first self-initiated project, <strong>BlueMart Retail Analytics</strong>, where I created a synthetic omnichannel retail dataset to analyze sales, inventory, and operational performance.
+      <h1 class="text-gradient mb-sm">Portfolio Projects</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+        Transforming complex retail data into strategic business intelligence through analytics, automation, and AI.
       </p>
     </section>
 
-    <section class="glass-panel scroll-reveal" style="padding: 4rem 2rem; text-align: center;">
-      <h2 style="color: var(--accent-cyan); margin-bottom: 1rem;">BlueMart Retail Analytics</h2>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem; line-height: 1.8;">
-        This is my ongoing data analytics project focused on simulating a UAE-based omnichannel retail business.  
-        I designed the synthetic dataset myself to study <strong>sales forecasting, channel efficiency,</strong> and <strong>inventory optimization</strong>.  
-        The project emphasizes business-oriented insights, exploratory data analysis, and actionable recommendations — bridging operational understanding with AI-driven analytics.
-      </p>
-      <div style="text-align: center;">
-        <a href="contact.html" class="btn btn-primary">Discuss This Project</a>
+    <!-- BlueMart Featured Project -->
+    <section class="glass-panel scroll-reveal" style="padding: 3rem 2rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="featured-tag">🎯 FEATURED PROJECT</div>
+        <h2 style="color: var(--accent-cyan); font-size: 2.5rem; margin-bottom: 1rem;">BlueMart Retail Analytics</h2>
+        <p style="color: var(--text-primary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+          End-to-end retail intelligence system analyzing <strong>AED 896.4M</strong> in omnichannel revenue across 50
+          stores
+        </p>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">AED 896M</div>
+          <div class="metric-label">Total Revenue Analyzed</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">50</div>
+          <div class="metric-label">Retail Locations</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">5,000</div>
+          <div class="metric-label">SKUs Tracked</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">30%</div>
+          <div class="metric-label">Gross Margin</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">2-5M</div>
+          <div class="metric-label">Annual Transactions</div>
+        </div>
+      </div>
+
+      <!-- Business Challenge -->
+      <div style="margin: 3rem 0;">
+        <h3 style="color: var(--text-heading); font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">Business
+          Challenge</h3>
+        <p
+          style="color: var(--text-secondary); max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: center;">
+          Mid-sized retailers struggle with <strong>inventory optimization</strong>, <strong>demand
+            forecasting</strong>, and <strong>omnichannel coordination</strong>.
+          I built a realistic synthetic dataset to simulate these challenges and develop data-driven solutions that
+          translate directly to real-world retail operations.
+        </p>
+      </div>
+
+      <!-- Key Insights -->
+      <div style="margin: 3rem 0;">
+        <h3 style="color: var(--text-heading); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Strategic
+          Insights Delivered</h3>
+        <div class="insights-grid">
+          <div class="insight-card scroll-reveal">
+            <h3>📊 Revenue Driver Identified</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Electronics category generates <strong>46.5% of total revenue</strong> (AED 416.8M) while maintaining
+              consistent 30% margins — primary profit driver.
+            </p>
+          </div>
+          <div class="insight-card scroll-reveal">
+            <h3>🏪 Omnichannel Balance</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Physical stores: <strong>50% revenue</strong> | Digital channels: <strong>40%</strong> | Marketplaces:
+              <strong>10%</strong> — validating multi-channel investment strategy.
+            </p>
+          </div>
+          <div class="insight-card scroll-reveal">
+            <h3>📈 Peak Performance</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              July Summer Sale generated <strong>AED 105.3M</strong> — highest monthly revenue, driven by Personal Care
+              (+50%) and Beverages (+40%) demand.
+            </p>
+          </div>
+          <div class="insight-card scroll-reveal">
+            <h3>🎯 Market Concentration</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Dubai accounts for <strong>56% of revenue</strong> (AED 501.8M) — strong market presence with expansion
+              opportunities in Abu Dhabi and Sharjah.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technology Stack -->
+      <div style="margin: 3rem 0; text-align: center;">
+        <h3 style="color: var(--text-heading); font-size: 1.5rem; margin-bottom: 1.5rem;">Technology Stack</h3>
+        <div class="tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Streamlit</span>
+          <span class="tech-badge">Plotly</span>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">Seaborn</span>
+          <span class="tech-badge">Faker</span>
+          <span class="tech-badge">Git</span>
+        </div>
+      </div>
+
+      <!-- Strategic Recommendations Preview -->
+      <div
+        style="margin: 3rem 0; background: rgba(0, 224, 255, 0.05); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 224, 255, 0.2);">
+        <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 1rem; text-align: center;">Strategic
+          Recommendations</h3>
+        <div style="max-width: 800px; margin: 0 auto;">
+          <ul style="color: var(--text-primary); line-height: 2; list-style-position: inside;">
+            <li><strong>Mobile App Growth:</strong> Target 15% → 20% revenue share through app-exclusive flash sales on
+              high-margin Electronics</li>
+            <li><strong>Marketplace Expansion:</strong> Expand Amazon.ae SKU range to 7,500, focusing on Personal Care
+              and Snacks (higher margins)</li>
+            <li><strong>Geographic Expansion:</strong> Open 3 new stores in Dubai (Dubai Marina, JBR, Business Bay) —
+              Expected +AED 45M annual revenue</li>
+            <li><strong>Private Label Strategy:</strong> Launch "BlueMart Essentials" in Household — Target 45% margins
+              vs 30% branded</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Call to Actions -->
+      <div class="cta-group">
+        <a href="https://github.com/Amir-Analyst/bluemart" target="_blank" class="btn btn-primary"
+          style="padding: 1rem 2rem;">
+          📁 View Full Project on GitHub
+        </a>
+        <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 2rem;">
+          💬 Discuss This Project
+        </a>
       </div>
     </section>
 
-    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 4rem 2rem;">
+    <!-- Coming Soon -->
+    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 3rem 2rem; margin-top: 3rem;">
       <h2 style="color: var(--text-heading); margin-bottom: 1rem;">More Projects Coming Soon</h2>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 500px; margin: 0 auto; line-height: 1.8;">
-        I'm expanding my portfolio with AI and business analytics projects that transform data into decision intelligence.  
-        New case studies and dashboards will be published here as I complete them.
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.8;">
+        Currently developing <strong>HomeVista</strong> — a UAE rental market analytics system for price prediction and
+        market segmentation.
+        New case studies will be published as I complete them.
       </p>
     </section>
   </main>
@@ -77,15 +290,14 @@
 
   <!-- Scripts -->
   <script>
-    // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
-    
+
     if (menuToggle) {
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
       });
-      
+
       document.querySelectorAll('#navMenu a').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.remove('active');
@@ -93,7 +305,6 @@
       });
     }
 
-    // Scroll reveal animation
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -112,4 +323,5 @@
     });
   </script>
 </body>
+
 </html>

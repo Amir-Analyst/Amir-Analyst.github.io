@@ -1,32 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Amir Khan - AI-driven business analyst transforming operational experience into intelligent analytics and automation solutions.">
-  <meta name="keywords" content="Amir Khan, Business Analytics, AI, Data Analysis, Supply Chain, Power BI, Python, ERP, Streamlit, Machine Learning">
+  <meta name="description" content="Amir Khan - Bridging operations and analytics with AI-augmented solutions.">
+  <meta name="keywords"
+    content="Amir Khan, Business Analytics, AI, Data Analysis, Operations, Python, Streamlit, Machine Learning">
   <meta name="author" content="Amir Khan">
-
-  <title>Amir Khan - AI-Driven Business Analyst | Portfolio</title>
+  <title>Amir Khan - The Practical Analyst | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .project-link {
-      color: var(--accent-cyan);
-      text-decoration: none;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      transition: color 0.3s ease;
+    main {
+      padding-top: 80px;
     }
-    .project-link:hover {
-      color: #00e0ff;
+
+    .value-badges {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+
+    .badge {
+      background: rgba(0, 224, 255, 0.1);
+      border: 1px solid rgba(0, 224, 255, 0.3);
+      color: var(--accent-cyan);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      border-top: 4px solid var(--accent-cyan);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      background: rgba(0, 224, 255, 0.05);
+      box-shadow: 0 10px 30px rgba(0, 224, 255, 0.1);
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: -0.75rem;
+      right: 1.5rem;
+      background: var(--gradient-primary);
+      color: var(--bg-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .hero-profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent-cyan);
+      box-shadow: 0 0 30px rgba(0, 224, 255, 0.2);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0, 224, 255, 0.4);
     }
   </style>
 </head>
-<body>
 
+<body>
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
@@ -47,83 +106,120 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="index-page">
-    <section class="hero">
-      <div class="hero-left" style="display:flex; align-items:center; gap:2rem;">
-        <div class="profile-image">
-          <img src="assets/images/profile.jpg" alt="Amir Khan">
+  <main>
+    <!-- Hero Section -->
+    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 4rem 2rem;">
+      <div style="max-width: 900px; margin: 0 auto;">
+
+        <!-- Profile Image -->
+        <img src="assets/images/profile.jpg" alt="Amir Khan" class="hero-profile-img">
+
+        <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 1rem;">
+          <span style="color: var(--text-heading);">Hey, I'm</span>
+          <span class="text-gradient">Amir Khan</span>
+        </h1>
+        <h2 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem;">
+          The Practical Analyst
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+          I bridge <strong>10+ years of operations experience</strong> with <strong>AI-augmented analytics</strong>
+          to solve real business problems. I don't just analyze data — I've lived the operational challenges I now solve
+          with code.
+        </p>
+
+        <!-- Value Badges -->
+        <div class="value-badges" style="justify-content: center;">
+          <span class="badge">10+ Years Experience</span>
+          <span class="badge">Operations → Analytics</span>
+          <span class="badge">AI-Augmented Workflow</span>
         </div>
-        <div class="hero-content">
-          <h1>Hey There, I'm Amir</h1>
-          <p class="subtitle">AI-Driven Business Analyst | Data & Analytics Practitioner</p>
-          <p class="description">
-            <span class="typing-text" id="typingText"></span>
+
+        <!-- Social Links -->
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+          <a href="https://linkedin.com/in/amir-khan-hussain" target="_blank" rel="noopener noreferrer"
+            style="color: var(--accent-cyan); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Amir-Analyst" target="_blank" rel="noopener noreferrer"
+            style="color: var(--accent-cyan); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            GitHub
+          </a>
+          <a href="mailto:amirmailforbusiness@gmail.com"
+            style="color: var(--accent-cyan); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Three Pillars -->
+    <section style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+      <h2 class="text-gradient" style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Explore My Work</h2>
+
+      <div class="pillar-grid">
+        <!-- The Work (Projects) -->
+        <div class="pillar-card scroll-reveal">
+          <div class="featured-tag">FEATURED</div>
+          <h3 style="color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 1rem;">The Work</h3>
+          <h4 style="color: var(--text-heading); margin-bottom: 0.75rem;">BlueMart Retail Analytics</h4>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            End-to-end retail intelligence analyzing <strong>AED 896M revenue</strong> across 50 stores.
+            From data generation to interactive dashboards — a complete analytics product.
           </p>
-          <div class="social-icons">
-            <a href="https://linkedin.com/in/amir-khan-hussain" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
+          <a href="projects.html" class="btn btn-primary" style="width: 100%;">View Full Project</a>
+        </div>
 
-            <a href="https://github.com/Amir-Analyst" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            </a>
+        <!-- The Method (How I Work) -->
+        <div class="pillar-card scroll-reveal">
+          <h3 style="color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 1rem;">The Method</h3>
+          <h4 style="color: var(--text-heading); margin-bottom: 0.75rem;">AI-Augmented Analytics</h4>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            My 4-step framework: <strong>Operational Discovery → AI Engineering → Analytical Modeling → Actionable
+              Delivery</strong>.
+            I orchestrate AI tools to focus on solving problems, not memorizing syntax.
+          </p>
+          <a href="howiwork.html" class="btn btn-secondary" style="width: 100%;">See My Methodology</a>
+        </div>
 
-            <a href="mailto:amirmailforbusiness@gmail.com" class="social-icon" aria-label="Email" onclick="copyEmail(event)">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </a>
-          </div>
-          <div style="margin-top: var(--spacing-sm);">
-            <a href="contact.html" class="btn btn-primary" style="padding:0.65rem 1.5rem; font-size:0.95rem;">Let's Connect</a>
-          </div>
+        <!-- The Story (About) -->
+        <div class="pillar-card scroll-reveal">
+          <h3 style="color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 1rem;">The Story</h3>
+          <h4 style="color: var(--text-heading); margin-bottom: 0.75rem;">From Field Sales to Data Science</h4>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            <strong>108% sales performance</strong> in India → <strong>6-pharmacy purchasing</strong> in Dubai →
+            Self-taught analytics transition. I've lived on both sides: the operations floor and the analytics
+            dashboard.
+          </p>
+          <a href="about.html" class="btn btn-secondary" style="width: 100%;">Read My Journey</a>
         </div>
       </div>
+    </section>
 
-      <div class="hero-right home-grid">
-
-        <!-- My Journey Widget -->
-        <div class="glass-panel bento-item scroll-reveal">
-          <div class="card">
-            <h3 class="card-title">My Journey</h3>
-            <p class="card-content" style="margin-bottom:0.5rem;">
-              10+ years across pharmacy operations, purchasing, and multi-outlet inventory management — now transformed into a career focused on analytics, automation, and AI-driven business systems.
-            </p>
-            <a href="about.html" class="project-link">
-              Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Core Expertise Widget -->
-        <div class="glass-panel bento-item scroll-reveal">
-          <div class="card">
-            <h3 class="card-title">Core Expertise</h3>
-            <ul class="skill-list" style="margin-top:0.5rem;">
-              <li>Retail & Pharmacy Operations (UAE – 50+ outlets)</li>
-              <li>Inventory Planning, Procurement & Vendor Management</li>
-              <li>ERP Systems: Microsoft Dynamics 365 & POS Data Flows</li>
-              <li>Data Analytics using Power BI, Python & SQL</li>
-              <li>Machine Learning, Forecasting & Workflow Automation</li>
-            </ul>
-            <a href="learningjourney.html" class="project-link">
-              View All Skills <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projects Widget -->
-        <div class="glass-panel bento-item scroll-reveal">
-          <div class="card">
-            <h3 class="card-title">Projects</h3>
-            <p class="card-content" style="margin-bottom:0.5rem;">
-              Building full-scale analytics products including BlueMart Retail Intelligence (omni-channel analysis on 2–5M annual transactions) and HomeVista (UAE rental market prediction).
-            </p>
-            <a href="projects.html" class="project-link">
-              View Projects <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
+    <!-- CTA Section -->
+    <section class="glass-panel scroll-reveal"
+      style="text-align: center; padding: 3rem 2rem; margin: 3rem auto; max-width: 800px;">
+      <h2 style="color: var(--text-heading); margin-bottom: 1rem;">Let's Work Together</h2>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+        Looking for someone who understands both the operational reality and the analytical solution?
+        Let's discuss how I can help transform your business challenges into data-driven opportunities.
+      </p>
+      <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Get in Touch</a>
     </section>
   </main>
 
@@ -132,46 +228,40 @@
     <p>&copy; 2024 Amir Khan. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    const menuToggle=document.getElementById('menuToggle');
-    const navMenu=document.getElementById('navMenu');
-    if(menuToggle){
-      menuToggle.addEventListener('click',()=>{navMenu.classList.toggle('active');});
-      document.querySelectorAll('#navMenu a').forEach(link=>link.addEventListener('click',()=>navMenu.classList.remove('active')));
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
     }
 
-    const observerOptions={threshold:0.1,rootMargin:'0px 0px -50px 0px'};
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('revealed'); });
-    },observerOptions);
-    document.querySelectorAll('.scroll-reveal').forEach(el=>observer.observe(el));
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-    const typingText=document.getElementById('typingText');
-    if(typingText){
-      const texts=[
-        "I analyze data to uncover insights that help drive better business decisions.",
-        "I turn complex datasets into actionable recommendations for real-world impact.",
-        "I build AI-driven solutions to automate operations and improve efficiency.",
-        "I translate numbers into narratives that guide strategy and growth."
-      ];
-      let textIndex=0,charIndex=0,isDeleting=false;
-      function typeText(){
-        const currentText=texts[textIndex];
-        if(isDeleting){ typingText.textContent=currentText.substring(0,charIndex-1); charIndex--; }
-        else{ typingText.textContent=currentText.substring(0,charIndex+1); charIndex++; }
-        let typeSpeed=isDeleting?50:100;
-        if(!isDeleting && charIndex===currentText.length){ typeSpeed=2000; isDeleting=true; }
-        else if(isDeleting && charIndex===0){ isDeleting=false; textIndex=(textIndex+1)%texts.length; typeSpeed=500; }
-        setTimeout(typeText,typeSpeed);
-      }
-      typeText();
-    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
 
-    function copyEmail(event){
-      event.preventDefault();
-      const email='amirmailforbusiness@gmail.com';
-      navigator.clipboard.writeText(email).then(()=>{alert('Email copied to clipboard: '+email);}).catch(err=>{console.error(err);window.location.href='mailto:'+email;});
-    }
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
+
 </html>

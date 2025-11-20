@@ -1,43 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Amir Khan’s structured learning journey in data analytics, AI, and business intelligence.">
+  <meta name="description"
+    content="Amir Khan - Continuous evolution in data analytics, AI engineering, and business intelligence.">
   <title>Learning Journey - Amir Khan</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    main { padding-top: 80px; }
-    .certificate-grid {
+    main {
+      padding-top: 80px;
+    }
+
+    .skill-stack-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
-      padding: 0 2rem 4rem;
+      margin: 3rem 0;
     }
-    .certificate-card h3 {
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--accent-cyan);
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateX(5px);
+      background: rgba(0, 224, 255, 0.05);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
       margin-top: 1rem;
-      color: var(--text-heading);
     }
-    .certificate-card p {
-      line-height: 1.5;
+
+    .skill-tag {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .milestone-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 4rem auto;
+      padding-left: 2rem;
+      border-left: 2px solid rgba(0, 224, 255, 0.2);
+    }
+
+    .milestone-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 2rem;
+    }
+
+    .milestone-dot {
+      position: absolute;
+      left: -2.6rem;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--bg-primary);
+      border: 2px solid var(--accent-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 224, 255, 0.3);
+    }
+
+    .milestone-content {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .future-focus {
+      background: linear-gradient(135deg, rgba(0, 224, 255, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+      border: 1px solid var(--accent-cyan);
+      padding: 3rem 2rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      margin-top: 4rem;
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-image">
-          <img src="assets/images/profile.jpg" alt="Amir Khan">
-        </div>
+        <div class="logo-image"><img src="assets/images/profile.jpg" alt="Amir Khan"></div>
         <span>Amir Khan</span>
       </a>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -51,61 +115,136 @@
 
   <!-- Main Content -->
   <main>
-    <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
-      <h1 class="text-gradient mb-sm">My Learning Journey</h1>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.8;">
-        Each certification here represents a practical step in my transition from operations and retail supply to analytics and AI-driven strategy.  
-        I treat learning as an evolving process — combining structure from industry-recognized programs with real-world experimentation through projects.
+    <!-- Hero Section -->
+    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 4rem 2rem;">
+      <h1 class="text-gradient mb-sm" style="font-size: 2.5rem;">The Evolution of a Modern Analyst</h1>
+      <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+        My journey isn't just about collecting certificates — it's about <strong>continuous adaptation</strong>.
+        I've evolved from managing physical inventory to engineering AI-driven analytics systems, always focused on one
+        goal:
+        <strong>solving business problems faster.</strong>
       </p>
     </section>
 
-    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 3rem 2rem;">
-      <h2 style="color: var(--accent-cyan); margin-bottom: 1.5rem;">AI & Machine Learning Foundations</h2>
-      <p style="color: var(--text-secondary); font-size: 1rem; max-width: 700px; margin: 0 auto 3rem; line-height: 1.8;">
-        These IBM programs gave me hands-on exposure to model building, neural networks, and generative AI workflows —  
-        helping me understand how algorithms connect to real business processes.
-      </p>
+    <!-- Skill Stack -->
+    <section style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+      <h2 class="text-gradient" style="text-align: center; margin-bottom: 2rem;">My Technical Stack</h2>
 
-      <div class="certificate-grid">
-        <div class="glass-panel certificate-card scroll-reveal">
-          <div class="certificate-logo" style="background: linear-gradient(135deg, #006699 0%, #003366 100%); color: white; font-weight: bold; font-size: 1.2rem;">IBM</div>
-          <h3>Generative AI Engineering</h3>
-          <p>IBM | 2025 · 173 Hours</p>
-          <a href="https://www.credly.com/badges/89df72c1-311d-46d0-82a7-4e7665f85475/linked_in_profile" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">View Credential →</a>
+      <div class="skill-stack-grid">
+        <!-- Core Engineering -->
+        <div class="skill-card scroll-reveal">
+          <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Core Engineering</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            The foundation of my automation and data pipelines. I use AI to accelerate development in these languages.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag" style="border: 1px solid #3776AB; color: #3776AB;">Python</span>
+            <span class="skill-tag" style="border: 1px solid #F29111; color: #F29111;">SQL (AI-Assisted)</span>
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
         </div>
 
-        <div class="glass-panel certificate-card scroll-reveal">
-          <div class="certificate-logo" style="background: linear-gradient(135deg, #006699 0%, #003366 100%); color: white; font-weight: bold; font-size: 1.2rem;">IBM</div>
-          <h3>AI Engineering</h3>
-          <p>IBM | 2025 · 161 Hours</p>
-          <a href="https://www.credly.com/badges/a5177af0-68f9-4282-9f20-453dd70b0871/linked_in_profile" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">View Credential →</a>
+        <!-- Data Science -->
+        <div class="skill-card scroll-reveal">
+          <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Data Science & ML</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            Tools I use to uncover patterns, forecast trends, and structure unstructured data.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Generative AI</span>
+          </div>
+        </div>
+
+        <!-- Visualization -->
+        <div class="skill-card scroll-reveal">
+          <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Visualization & BI</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            How I communicate insights. I choose the right tool for the audience and data size.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag" style="border: 1px solid #E95420; color: #E95420;">Tableau</span>
+            <span class="skill-tag" style="border: 1px solid #FF4B4B; color: #FF4B4B;">Streamlit</span>
+            <span class="skill-tag">Plotly</span>
+            <span class="skill-tag" style="border: 1px solid #217346; color: #217346;">Excel Dashboards</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 3rem 2rem;">
-      <h2 style="color: var(--accent-green); margin-bottom: 1.5rem;">Data Analytics & Business Intelligence</h2>
-      <p style="color: var(--text-secondary); font-size: 1rem; max-width: 700px; margin: 0 auto 3rem; line-height: 1.8;">
-        My Google certifications built a strong foundation in analytical problem solving —  
-        from structuring business data to visual storytelling and model interpretation for decision-making.
-      </p>
+    <!-- Milestones -->
+    <section style="max-width: 1000px; margin: 0 auto; padding: 2rem 1rem;">
+      <h2 style="color: var(--text-heading); text-align: center; margin-bottom: 3rem;">Certification Milestones</h2>
 
-      <div class="certificate-grid">
-        <div class="glass-panel certificate-card scroll-reveal">
-          <div class="certificate-logo" style="background: linear-gradient(135deg, #4285F4 0%, #34A853 100%); color: white; font-weight: bold; font-size: 1.4rem;">G</div>
-          <h3>Advanced Data Analytics</h3>
-          <p>Google | 2024 · 172 Hours</p>
-          <a href="https://www.credly.com/badges/8669fc84-e78a-419c-918f-790e980a98e2/linked_in_profile" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">View Credential →</a>
+      <div class="milestone-timeline">
+
+        <!-- IBM AI -->
+        <div class="milestone-item scroll-reveal">
+          <div class="milestone-dot"></div>
+          <div class="milestone-content">
+            <div
+              style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <h3 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">IBM AI Engineering Professional
+                  Certificate</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">IBM | 2025</p>
+              </div>
+              <a href="https://www.credly.com/badges/a5177af0-68f9-4282-9f20-453dd70b0871/linked_in_profile"
+                target="_blank" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem;">View
+                Credential</a>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-primary);">
+              <strong>The Specialization.</strong> Deep dive into Machine Learning, Deep Learning, and Neural Networks.
+              Moved beyond simple analysis to building predictive models and understanding the architecture of AI
+              systems.
+            </p>
+          </div>
         </div>
 
-        <div class="glass-panel certificate-card scroll-reveal">
-          <div class="certificate-logo" style="background: linear-gradient(135deg, #4285F4 0%, #34A853 100%); color: white; font-weight: bold; font-size: 1.4rem;">G</div>
-          <h3>Data Analytics Professional Certificate</h3>
-          <p>Google | 2024 · 152 Hours</p>
-          <a href="https://www.credly.com/badges/faaf2af8-d740-4094-bbfb-9d7f16c3e2dd/linked_in_profile" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">View Credential →</a>
+        <!-- Google Analytics -->
+        <div class="milestone-item scroll-reveal">
+          <div class="milestone-dot"></div>
+          <div class="milestone-content">
+            <div
+              style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <h3 style="color: var(--accent-green); margin-bottom: 0.5rem;">Google Advanced Data Analytics</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Google | 2024</p>
+              </div>
+              <a href="https://www.credly.com/badges/8669fc84-e78a-419c-918f-790e980a98e2/linked_in_profile"
+                target="_blank" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem;">View
+                Credential</a>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-primary);">
+              <strong>The Foundation.</strong> Mastered the end-to-end data analysis process: Ask, Prepare, Process,
+              Analyze, Share, Act.
+              Solidified Python and statistical concepts for business applications.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Future Focus -->
+    <section class="scroll-reveal" style="max-width: 800px; margin: 0 auto 4rem; padding: 0 1rem;">
+      <div class="future-focus">
+        <h2 style="color: var(--text-heading); margin-bottom: 1rem;">What's Next?</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+          I am currently expanding my expertise into <strong>Agentic AI</strong> and <strong>LLM Fine-tuning</strong>.
+          My goal is to build autonomous systems that can not only analyze data but take intelligent actions based on
+          it.
+        </p>
+        <div
+          style="display: inline-block; background: rgba(255,255,255,0.1); padding: 0.5rem 1.5rem; border-radius: 20px; color: var(--accent-cyan);">
+          Currently Exploring: Google Vertex AI & LangChain
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -117,10 +256,12 @@
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
+
     if (menuToggle) {
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
       });
+
       document.querySelectorAll('#navMenu a').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.remove('active');
@@ -128,13 +269,23 @@
       });
     }
 
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('revealed');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
       });
     }, observerOptions);
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
+
 </html>

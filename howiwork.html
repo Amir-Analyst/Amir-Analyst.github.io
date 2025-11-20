@@ -1,15 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="How Amir Khan approaches work — blending operational experience with analytics and AI.">
+  <meta name="description" content="How Amir Khan works - AI-Augmented Analytics and Operational Intelligence.">
   <title>How I Work - Amir Khan</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     main {
       padding-top: 80px;
+    }
+
+    .methodology-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .step-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      border-top: 4px solid var(--accent-cyan);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      background: rgba(0, 224, 255, 0.05);
+      box-shadow: 0 10px 30px rgba(0, 224, 255, 0.1);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -1.5rem;
+      left: 1.5rem;
+      background: var(--bg-secondary);
+      border: 2px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .bridge-section {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 224, 255, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+      padding: 4rem 2rem;
+      margin: 4rem 0;
+      text-align: center;
+    }
+
+    .tech-philosophy {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .philosophy-card {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: var(--radius-md);
     }
   </style>
 </head>
@@ -19,16 +79,10 @@
   <nav>
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <div class="logo-image">
-          <img src="assets/images/profile.jpg" alt="Amir Khan">
-        </div>
+        <div class="logo-image"><img src="assets/images/profile.jpg" alt="Amir Khan"></div>
         <span>Amir Khan</span>
       </a>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -42,87 +96,146 @@
 
   <!-- Main Content -->
   <main>
-    <!-- Intro Section -->
-    <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
-      <h1 class="text-gradient mb-sm">How I Work</h1>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
-        I approach every problem with a mix of business intuition and analytical structure.  
-        Whether managing inventory or building a dataset, I start by simplifying — understanding what truly matters — then use data and automation to make each process more efficient and predictable.
+    <!-- Hero Section -->
+    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 3rem 2rem;">
+      <h1 class="text-gradient mb-sm" style="font-size: 2.5rem;">My Methodology</h1>
+      <h2 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem;">Turning Chaos into Clarity with
+        AI-Augmented Analytics</h2>
+      <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+        I don't just write code — I orchestrate solutions. By combining <strong>operational intuition</strong> with
+        <strong>AI-driven engineering</strong>,
+        I build scalable analytics systems faster and more reliably than traditional methods.
       </p>
     </section>
 
-    <!-- Work Philosophy Section -->
-    <section class="glass-panel scroll-reveal" style="padding: 4rem 2rem;">
-      <h2 style="color: var(--accent-cyan); margin-bottom: 1rem; text-align: center;">My Work Philosophy</h2>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 750px; margin: 0 auto 2rem; line-height: 1.8; text-align: center;">
-        I see technology as an enabler — not a replacement for judgment.  
-        My process revolves around clarity, consistency, and communication.  
-        I build workflows that align people, data, and decisions — ensuring insights translate into action.
-      </p>
-    </section>
+    <!-- 4-Step Workflow -->
+    <section class="glass-panel scroll-reveal" style="margin-top: 3rem; padding-top: 3rem;">
+      <h2 style="text-align: center; margin-bottom: 3rem;">The Operational Analytics Framework</h2>
 
-    <!-- Work Approach Sections -->
-    <section class="glass-panel scroll-reveal" style="padding: 4rem 2rem;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
-        
-        <!-- Data & Automation -->
-        <div>
-          <h3 style="color: var(--text-heading); margin-bottom: 0.75rem;">Data & Automation</h3>
-          <p style="color: var(--text-secondary); line-height: 1.8;">
-            I use <strong>Python</strong> for data cleaning, exploratory analysis, and light automation.  
-            Tools like <strong>Power BI</strong> and <strong>Excel</strong> help me visualize insights and connect analytics to business goals.  
-            I’m now expanding into <strong>Flask-based</strong> and <strong>AI workflow automation</strong> to make insights accessible to non-technical users.
+      <div class="methodology-grid">
+        <!-- Step 1 -->
+        <div class="step-card scroll-reveal">
+          <div class="step-number">1</div>
+          <h3 style="color: var(--text-heading); margin-top: 1rem; margin-bottom: 1rem;">Operational Discovery</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            <strong>I go to the floor first.</strong> Before touching data, I understand the physical process — how
+            inventory moves, how suppliers communicate, where the bottlenecks live.
+            Data without context is just noise.
           </p>
         </div>
 
-        <!-- Business Operations -->
-        <div>
-          <h3 style="color: var(--text-heading); margin-bottom: 0.75rem;">Business Operations</h3>
-          <p style="color: var(--text-secondary); line-height: 1.8;">
-            My base comes from real operations — procurement, vendor coordination, and demand forecasting.  
-            That ground experience built my sense for how numbers behave in the real world — every metric connects to cost, time, or people.
+        <!-- Step 2 -->
+        <div class="step-card scroll-reveal">
+          <div class="step-number">2</div>
+          <h3 style="color: var(--text-heading); margin-top: 1rem; margin-bottom: 1rem;">AI-Augmented Engineering</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            <strong>I architect, AI builds.</strong> I define the logic and business rules, then leverage AI agents to
+            generate robust Python/SQL pipelines.
+            This allows me to be <strong>tool-agnostic</strong> and focus on solving the business problem, not just
+            syntax.
           </p>
         </div>
 
-        <!-- Analytical Thinking -->
-        <div>
-          <h3 style="color: var(--text-heading); margin-bottom: 0.75rem;">Analytical Thinking</h3>
-          <p style="color: var(--text-secondary); line-height: 1.8;">
-            Data is never just rows — it’s a reflection of choices, trends, and human behavior.  
-            I analyze patterns to find what can be improved or predicted, and express insights in clear, decision-ready formats rather than technical jargon.
+        <!-- Step 3 -->
+        <div class="step-card scroll-reveal">
+          <div class="step-number">3</div>
+          <h3 style="color: var(--text-heading); margin-top: 1rem; margin-bottom: 1rem;">Analytical Modeling</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            <strong>Finding the signal.</strong> I move beyond "what happened" to "why" and "what's next".
+            Using Python libraries (Pandas, NumPy), I structure messy operational data into clean, decision-ready
+            insights.
           </p>
         </div>
 
-        <!-- Collaboration -->
-        <div>
-          <h3 style="color: var(--text-heading); margin-bottom: 0.75rem;">Collaboration & Communication</h3>
-          <p style="color: var(--text-secondary); line-height: 1.8;">
-            I keep communication direct and thoughtful.  
-            When I work with teams — from warehouse staff to data engineers — I focus on shared understanding and actionable next steps.  
-            I believe clear discussions build trust faster than polished slides.
-          </p>
-        </div>
-
-        <!-- Language & Culture -->
-        <div>
-          <h3 style="color: var(--text-heading); margin-bottom: 0.75rem;">Language & Culture</h3>
-          <p style="color: var(--text-secondary); line-height: 1.8;">
-            I communicate comfortably in <strong>English, Hindi, Tamil, Telugu, Kannada</strong>, and basic <strong>Malayalam</strong>.  
-            Working across India and the UAE taught me adaptability — to read people and situations as much as data — which helps when bridging cultural or departmental gaps.
+        <!-- Step 4 -->
+        <div class="step-card scroll-reveal">
+          <div class="step-number">4</div>
+          <h3 style="color: var(--text-heading); margin-top: 1rem; margin-bottom: 1rem;">Actionable Delivery</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            <strong>Dashboards that get used.</strong> I design for decision-makers, not data scientists.
+            Whether it's a Streamlit app or an automated report, the output is always clear, visual, and directly tied
+            to business action.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Closing Section -->
-    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 4rem 2rem;">
-      <h2 style="color: var(--accent-cyan); margin-bottom: 1rem;">Where This Is Heading</h2>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
-        I’m blending over a decade of operational experience with data analytics — and moving toward  
-        <strong>AI-driven business strategy</strong>. My goal is to design systems that not only explain what happened,  
-        but also help decide what should happen next.
+    <!-- The Bridge Section -->
+    <section class="bridge-section scroll-reveal">
+      <h2 class="text-gradient mb-lg">The "Bridge" Advantage</h2>
+      <p
+        style="color: var(--text-primary); font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem; line-height: 1.8;">
+        Most companies have a gap between their Operations teams and their Data teams. <br><strong>I am the
+          bridge.</strong>
       </p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: center;">
+        <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: var(--radius-md); width: 300px;">
+          <h3 style="color: var(--accent-emerald);">Operations</h3>
+          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem; line-height: 1.8;">
+            <li>Inventory Flow</li>
+            <li>Supplier Relations</li>
+            <li>Procurement</li>
+            <li>"Gut Feeling"</li>
+          </ul>
+        </div>
+
+        <div style="font-size: 2rem; color: var(--accent-cyan);">⇄</div>
+
+        <div
+          style="background: rgba(0, 224, 255, 0.1); padding: 2rem; border-radius: var(--radius-md); width: 320px; border: 2px solid var(--accent-cyan); transform: scale(1.1);">
+          <h3 style="color: var(--text-heading);">Amir Khan</h3>
+          <p style="color: var(--accent-cyan); font-weight: 600; margin-top: 0.5rem;">The Translator</p>
+          <p style="font-size: 0.9rem; margin-top: 1rem; line-height: 1.6;">
+            Translating business needs into technical requirements, and data insights into operational action.
+          </p>
+        </div>
+
+        <div style="font-size: 2rem; color: var(--accent-cyan);">⇄</div>
+
+        <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: var(--radius-md); width: 300px;">
+          <h3 style="color: var(--accent-purple);">Technology</h3>
+          <ul style="text-align: left; color: var(--text-secondary); margin-top: 1rem; line-height: 1.8;">
+            <li>Python & SQL</li>
+            <li>Machine Learning</li>
+            <li>Automation</li>
+            <li>Dashboards</li>
+          </ul>
+        </div>
+      </div>
     </section>
+
+    <!-- Tech Philosophy -->
+    <section class="glass-panel scroll-reveal">
+      <h2 class="text-gradient mb-lg" style="text-align: center;">My Tech Philosophy</h2>
+
+      <div class="tech-philosophy">
+        <div class="philosophy-card">
+          <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Tool Agnostic</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            I don't get hung up on syntax. Whether a project needs <strong>SQL, Python, or a new framework</strong>,
+            I use AI tools to adapt instantly. My expertise is in <strong>solving the problem</strong>, not memorizing
+            the dictionary.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <h3 style="color: var(--text-heading); margin-bottom: 1rem;">Speed to Value</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            Business moves fast. I prefer <strong>rapid prototyping</strong> — building a working MVP (Minimum Viable
+            Product)
+            to get immediate feedback, then iterating based on real usage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align: center; margin: 4rem 0;">
+      <a href="projects.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">See This
+        Methodology in Action</a>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -139,6 +252,7 @@
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
       });
+
       document.querySelectorAll('#navMenu a').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.remove('active');
@@ -150,6 +264,7 @@
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -157,7 +272,11 @@
         }
       });
     }, observerOptions);
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
+
 </html>

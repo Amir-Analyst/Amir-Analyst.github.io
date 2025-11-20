@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Amir Khan - AI-driven Business Analytics, Retail Data Strategy, and Portfolio Projects.">
+  <meta name="description"
+    content="About Amir Khan - Data Analyst bridging operational expertise with analytical intelligence for business impact.">
   <title>About Me - Amir Khan</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
-
   <style>
-    body { padding-top: 80px; }
-    nav {
-      position: fixed; top: 0; width: 100%;
-      background: rgba(10, 10, 10, 0.75);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
+    main {
+      padding-top: 80px;
     }
-    .nav-container {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0.75rem 2rem; max-width: 1200px; margin: auto;
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
     }
-    .logo { display: flex; align-items: center; text-decoration: none; color: var(--text-heading); font-weight: 600; font-size: 1.1rem; }
-    .logo-image img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-right: 10px; border: 2px solid var(--accent-cyan); }
-    #navMenu { display: flex; gap: 1.5rem; list-style: none; }
-    #navMenu a { text-decoration: none; color: var(--text-secondary); transition: color 0.3s ease; }
-    #navMenu a.active, #navMenu a:hover { color: var(--accent-cyan); }
-    main { max-width: 1100px; margin: auto; padding: 2rem 1rem 5rem 1rem; }
-    section { margin-bottom: 3rem; }
+
+    .value-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--accent-cyan);
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      background: rgba(0, 224, 255, 0.05);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 224, 255, 0.15);
+    }
+
+    .value-card h3 {
+      color: var(--accent-cyan);
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .strength-card {
+      background: rgba(0, 224, 255, 0.08);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      border: 1px solid rgba(0, 224, 255, 0.2);
+    }
+
+    .strength-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .strength-card h3 {
+      color: var(--accent-cyan);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
-<body>
 
+<body>
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
@@ -50,103 +89,161 @@
     </div>
   </nav>
 
+  <!-- Main Content -->
   <main>
+    <!-- Hero Section -->
+    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 3rem 2rem;">
+      <h1 style="font-size: 2.5rem; line-height: 1.3; margin-bottom: 1.5rem;">
+        <span style="color: var(--text-heading);">From Field Sales to Data Science —</span><br>
+        <span class="text-gradient">Bridging Operational Reality with Analytical Intelligence</span>
+      </h1>
+      <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 750px; margin: 0 auto; line-height: 1.8;">
+        I transform complex business challenges into data-driven solutions because I've lived on both sides:
+        <strong>the operations floor and the analytics dashboard</strong>.
+      </p>
+    </section>
 
-    <!-- About Me -->
-    <section class="glass-panel scroll-reveal">
-      <h1 class="text-gradient mb-lg">About Me</h1>
-      <div class="card-content" style="line-height:1.8;">
+    <!-- My Unique Value -->
+    <section class="glass-panel scroll-reveal" style="margin-top: 3rem;">
+      <h2 class="text-gradient mb-lg" style="text-align: center;">What Makes Me Different</h2>
 
-        <p style="font-size:1.1rem; margin-bottom:1.5rem;">
-          I’m <strong>Amir Khan</strong> — a Data Analyst and AI-driven Business Strategist with  
-          <strong>10.5+ years of experience</strong> across retail, pharmacy, purchasing, and supply chain operations in the UAE and India.  
-          My unique edge is combining real-world operational experience with <strong>analytics, automation, and AI</strong> to solve business challenges with clarity and intelligence.
-        </p>
-
-        <p style="margin-bottom:1.5rem;">
-          I started my career in India as a <strong>Medical Representative</strong>, where I learned how markets, customer behavior, and product performance shape business outcomes.  
-          After moving to the UAE, I spent five years managing <strong>pharmacy purchasing, multi-outlet inventory, forecasting, and supplier coordination</strong>.  
-          Working inside operational bottlenecks taught me a key insight:  
-          <strong>most operational problems are actually data problems — and they require analytical systems, not manual fixes.</strong>
-        </p>
-
-        <p style="margin-bottom:1.5rem;">
-          Today, I specialize in building <strong>AI-ready analytics systems</strong> — transforming raw ERP data (e.g., Dynamics 365) into insights, forecasts, dashboards, and automation pipelines.  
-          I combine business logic with technical skills through a growing stack that includes <strong>Python, SQL, Streamlit, Power BI, machine learning, workflow automation, and product-oriented analytics design</strong>.
-        </p>
-
-        <h2 style="margin-top:2rem; margin-bottom:1rem; color: var(--accent-cyan);">Current Focus</h2>
-
-        <p style="margin-bottom:1.5rem;">
-          I’m building two full-scale portfolio systems that reflect real business scenarios:
-        </p>
-
-        <p style="margin-bottom:1.5rem;">
-          <strong>BlueMart Retail Analytics</strong> — a simulated omni-channel retail product using a realistic synthetic dataset  
-          (2–5M annual transactions, 50+ stores, 5K–10K SKUs).  
-          It focuses on <strong>EDA, forecasting, inventory optimization, customer insights, promotions analysis</strong>,  
-          and a <strong>Streamlit multi-page dashboard</strong> powered by Plotly and dynamic KPIs.
-        </p>
-
-        <p style="margin-bottom:1.5rem;">
-          <strong>HomeVista</strong> — a UAE rental analytics system for <strong>price prediction, market segmentation, and scenario modeling</strong>.
-        </p>
-
-        <h2 style="margin-top:2rem; margin-bottom:1rem; color: var(--accent-cyan);">My Philosophy</h2>
-        <p style="margin-bottom:1.5rem;">
-          Analytics is most powerful when it feels like a product — clear, actionable, and scalable.  
-          My decision-making principles are:
-        </p>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; margin-top:2rem;">
-
-          <div class="glass-panel" style="padding:1.5rem;">
-            <h3 style="font-size:1.2rem; margin-bottom:0.5rem; color: var(--accent-cyan);">Clarity</h3>
-            <p style="color: var(--text-secondary); font-size:0.95rem;">
-              Insights should be simple, intuitive, and decision-ready.
-            </p>
-          </div>
-
-          <div class="glass-panel" style="padding:1.5rem;">
-            <h3 style="font-size:1.2rem; margin-bottom:0.5rem; color: var(--accent-cyan);">Impact</h3>
-            <p style="color: var(--text-secondary); font-size:0.95rem;">
-              Analytics must drive measurable improvements, not just reports.
-            </p>
-          </div>
-
-          <div class="glass-panel" style="padding:1.5rem;">
-            <h3 style="font-size:1.2rem; margin-bottom:0.5rem; color: var(--accent-cyan);">Scalability</h3>
-            <p style="color: var(--text-secondary); font-size:0.95rem;">
-              Systems should evolve with business growth — built with automation and longevity in mind.
-            </p>
-          </div>
-
+      <div class="value-grid">
+        <div class="value-card scroll-reveal">
+          <h3>🎯 Operational Experience + Analytical Mindset</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            10.5 years managing inventory, forecasting demand, and coordinating suppliers taught me what metrics
+            actually matter.
+            I don't analyze data in isolation — I solve real operational bottlenecks.
+          </p>
         </div>
 
+        <div class="value-card scroll-reveal">
+          <h3>🏆 Proven Performance Track Record</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            <strong>108% sales performance</strong> earned me an Area Manager promotion at Cadila Pharmaceuticals.
+            In Dubai, trusted with <strong>6-pharmacy purchasing operations</strong> within 1 year. I deliver measurable
+            results.
+          </p>
+        </div>
+
+        <div class="value-card scroll-reveal">
+          <h3>🌍 Cross-Market, Cross-Industry Insight</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            India pharmaceutical sales + UAE retail operations = deep understanding of customer behavior, supply chains,
+            and market dynamics
+            across industries. Patterns in business are universal — tools are transferable.
+          </p>
+        </div>
+
+        <div class="value-card scroll-reveal">
+          <h3>💡 Self-Driven Learning & Growth</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            No formal CS degree. Self-taught Python, ML, and analytics while working full-time.
+            Earned <strong>4 professional certifications</strong> (IBM AI Engineering, Google Data Analytics). I adapt,
+            learn, and execute.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Work Experience -->
+    <!-- My Journey -->
     <section class="glass-panel scroll-reveal mt-lg">
-      <h2 class="text-gradient mb-lg">Work Experience</h2>
-      <div class="timeline">
+      <h2 class="text-gradient mb-lg">My Professional Journey</h2>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <p style="color: var(--text-primary); font-size: 1.1rem; line-height: 1.9; margin-bottom: 2rem;">
+          My career path isn't traditional — and that's my advantage. I started in pharmaceutical field sales in India,
+          where I learned how markets work, how customers make decisions, and how product performance shapes business
+          outcomes.
+          After <strong>achieving 108% of sales targets in 2018</strong>, I was promoted to <strong>Area Business
+            Manager</strong>
+          — a recognition of consistent performance and strategic thinking.
+        </p>
 
+        <p style="color: var(--text-primary); font-size: 1.1rem; line-height: 1.9; margin-bottom: 2rem;">
+          I made a strategic decision to relocate to Dubai in 2020, where I entered retail pharmacy operations.
+          Starting as an Assistant Pharmacist, I quickly proved my operational capabilities — within one year,
+          I was entrusted with <strong>purchasing and inventory management for 6 pharmacy outlets</strong>.
+          This hands-on experience with multi-location coordination, supplier negotiations, and stock optimization
+          became
+          the foundation for my transition into analytics.
+        </p>
+
+        <p style="color: var(--text-primary); font-size: 1.1rem; line-height: 1.9; margin-bottom: 2rem;">
+          Working inside operational bottlenecks taught me a critical insight:
+          <strong>most operational problems are actually data problems</strong> — and they require analytical systems,
+          not just manual effort.
+          This realization drove me to self-teach Python, SQL, machine learning, and business analytics while continuing
+          my full-time role.
+        </p>
+
+        <p style="color: var(--text-primary); font-size: 1.1rem; line-height: 1.9;">
+          Today, I specialize in building <strong>AI-ready analytics systems</strong> that transform raw ERP data into
+          insights,
+          forecasts, dashboards, and automation pipelines. I combine operational understanding with technical execution
+          to deliver solutions that actually work in real business environments — because I've been there.
+        </p>
+      </div>
+    </section>
+
+    <!-- Core Strengths -->
+    <section class="glass-panel scroll-reveal mt-lg">
+      <h2 class="text-gradient mb-lg" style="text-align: center;">Core Strengths</h2>
+
+      <div class="strengths-grid">
+        <div class="strength-card scroll-reveal">
+          <div class="strength-icon">📊</div>
+          <h3>Operational Intelligence</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Inventory management, demand forecasting, supplier coordination, multi-outlet operations
+          </p>
+        </div>
+
+        <div class="strength-card scroll-reveal">
+          <div class="strength-icon">🔍</div>
+          <h3>Analytical Thinking</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Python, SQL, EDA, statistical analysis, data visualization, dashboard development
+          </p>
+        </div>
+
+        <div class="strength-card scroll-reveal">
+          <div class="strength-icon">🎯</div>
+          <h3>Business Strategy</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Market analysis, performance optimization, KPI design, strategic recommendations
+          </p>
+        </div>
+
+        <div class="strength-card scroll-reveal">
+          <div class="strength-icon">🔗</div>
+          <h3>Cross-Functional Bridge</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Translate technical insights into business outcomes, connect operations with analytics
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="glass-panel scroll-reveal mt-lg">
+      <h2 class="text-gradient mb-lg">Experience Timeline</h2>
+      <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-date">May 2023 - Present</div>
           <h3>Inventory Analyst & Operations Support</h3>
-          <p style="color: var(--text-secondary); margin-bottom:1rem;">Docib Healthcare LLC | Dubai</p>
-          <ul style="list-style:none; padding:0;">
-            <li style="display:flex; align-items:start; padding:0.5rem 0;">
-              <span style="color:var(--accent-emerald); margin-right:0.5rem;">▹</span>
-              Manage inventory and purchasing for multiple outlets to maintain optimal stock levels.
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Docib Healthcare LLC | Dubai, UAE</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              Manage inventory and purchasing for multiple outlets to maintain optimal stock levels
             </li>
-            <li style="display:flex; align-items:start; padding:0.5rem 0;">
-              <span style="color:var(--accent-emerald); margin-right:0.5rem;">▹</span>
-              Coordinate with suppliers to optimize procurement and lead times.
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              Coordinate with suppliers to optimize procurement cycles and lead times
             </li>
-            <li style="display:flex; align-items:start; padding:0.5rem 0;">
-              <span style="color:var(--accent-emerald); margin-right:0.5rem;">▹</span>
-              Analyze trends using ERP and Excel to provide actionable forecasts.
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              Analyze ERP data and Excel reports to deliver actionable demand forecasts
             </li>
           </ul>
         </div>
@@ -154,37 +251,44 @@
         <div class="timeline-item">
           <div class="timeline-date">Mar 2020 - May 2023</div>
           <h3>Assistant Pharmacist & Purchaser</h3>
-          <p style="color: var(--text-secondary); margin-bottom:1rem;">Creekline Pharmacy LLC | Dubai</p>
-          <ul style="list-style:none; padding:0;">
-            <li style="display:flex; align-items:start; padding:0.5rem 0;">
-              <span style="color:var(--accent-emerald); margin-right:0.5rem;">▹</span>
-              Handled pharmaceutical purchasing and vendor negotiations.
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Creekline Pharmacy LLC | Dubai, UAE</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              <strong>Promoted to purchasing role for 6 outlets within 1 year</strong> based on operational performance
             </li>
-            <li style="display:flex; align-items:start; padding:0.5rem 0;">
-              <span style="color:var(--accent-emerald); margin-right:0.5rem;">▹</span>
-              Maintained stock accuracy and compliance through detailed record-keeping.
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              Handled pharmaceutical purchasing, vendor negotiations, and contract management
+            </li>
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              Maintained stock accuracy and regulatory compliance through systematic record-keeping
             </li>
           </ul>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-date">Feb 2015 - Dec 2019</div>
-          <h3>Medical Representative</h3>
-          <p style="color: var(--text-secondary); margin-bottom:1rem;">
-            Indoco Remedies / Cadila Pharmaceuticals | India
-          </p>
-          <ul style="list-style:none; padding:0;">
-            <li style="display:flex; align-items:start; padding:0.5rem 0;">
-              <span style="color:var(--accent-emerald); margin-right:0.5rem;">▹</span>
-              Promoted pharmaceutical products, achieving consistent growth.
+          <h3>Medical Representative → Area Business Manager (Promoted)</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Indoco Remedies / Cadila Pharmaceuticals |
+            Bangalore, India</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              <strong>Achieved 108% of sales targets in 2018</strong> — top performance tier
             </li>
-            <li style="display:flex; align-items:start; padding:0.5rem 0;">
-              <span style="color:var(--accent-emerald); margin-right:0.5rem;">▹</span>
-              Built strong relationships with healthcare practitioners.
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              <strong>Promoted to Area Business Manager</strong> through Level Next leadership program (turned down for
+              Dubai relocation)
+            </li>
+            <li style="display: flex; align-items: start; padding: 0.5rem 0;">
+              <span style="color: var(--accent-emerald); margin-right: 0.5rem;">▹</span>
+              Built strong relationships with healthcare practitioners and drove consistent territory growth
             </li>
           </ul>
         </div>
-
       </div>
     </section>
 
@@ -205,51 +309,87 @@
       </div>
     </section>
 
-    <!-- Connect Ribbon -->
-    <section class="glass-panel scroll-reveal mt-lg">
-      <h2 class="text-gradient mb-lg">Let's Connect</h2>
-      <p style="text-align:center; color: var(--text-secondary); font-size:1.1rem; max-width:650px; margin:0 auto 2rem auto; line-height:1.8;">
-        Interested in collaborating or learning more about my work?  
-        I’m open to exploring AI, analytics, and business optimization projects.
-      </p>
-      <div style="padding:1.5rem; background: rgba(0,224,255,0.05); border-radius:var(--radius-md); border:1px solid rgba(0,224,255,0.2); text-align:center;">
-        <p style="color: var(--text-primary); line-height:1.6;">
-          <strong>Availability:</strong> Open to collaborating on AI, analytics, and business process optimization projects.  
-          Let’s explore how I can help translate data into smarter business decisions.
-        </p>
-        <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">Get in Touch</a>
+    <!-- Why Work With Me -->
+    <section class="glass-panel scroll-reveal mt-lg"
+      style="background: rgba(0, 224, 255, 0.05); border: 1px solid rgba(0, 224, 255, 0.2);">
+      <h2 class="text-gradient mb-lg" style="text-align: center;">Why Work With Me</h2>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 0.75rem;">For Data-Driven
+            Organizations</h3>
+          <p style="color: var(--text-primary); line-height: 1.8;">
+            I don't just analyze data — I understand the operational context behind it.
+            This means faster time-to-insight, more practical recommendations, and solutions that actually get
+            implemented.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 0.75rem;">For Operations-Heavy
+            Businesses</h3>
+          <p style="color: var(--text-primary); line-height: 1.8;">
+            I've managed inventory, coordinated suppliers, and optimized purchasing at scale.
+            I speak both the language of operations and the language of analytics — bridging the gap between teams.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 0.75rem;">For Growing Companies</h3>
+          <p style="color: var(--text-primary); line-height: 1.8;">
+            My skillset is versatile across industries — retail, healthcare, logistics, or any data-intensive business.
+            I build scalable systems designed to evolve with your growth, not become technical debt.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+          Let's Discuss Opportunities
+        </a>
       </div>
     </section>
-
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Amir Khan. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
+
     if (menuToggle) {
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
       });
-      document.querySelectorAll('#navMenu a').forEach(link =>
-        link.addEventListener('click', () => navMenu.classList.remove('active'))
-      );
+
+      document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
     }
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('revealed');
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
   </script>
-
 </body>
+
 </html>
