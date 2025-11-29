@@ -108,6 +108,79 @@
       flex-wrap: wrap;
       margin-top: 2rem;
     }
+
+    /* Project Navigation Ribbon */
+    .project-nav {
+      position: sticky;
+      top: 80px;
+      z-index: 100;
+      background: rgba(10, 10, 30, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 224, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 1rem 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-nav-list {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .project-nav-item {
+      position: relative;
+    }
+
+    .project-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 224, 255, 0.3);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-nav-link:hover {
+      background: rgba(0, 224, 255, 0.1);
+      border-color: var(--accent-cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 224, 255, 0.2);
+    }
+
+    .project-nav-link.active {
+      background: rgba(0, 224, 255, 0.15);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    @media (max-width: 768px) {
+      .project-nav {
+        top: 70px;
+        padding: 0.75rem 1rem;
+      }
+
+      .project-nav-list {
+        gap: 0.75rem;
+      }
+
+      .project-nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 
@@ -141,8 +214,26 @@
       </p>
     </section>
 
+    <!-- Project Navigation Ribbon -->
+    <div class="project-nav">
+      <ul class="project-nav-list">
+        <li class="project-nav-item">
+          <a href="#bluemart" class="project-nav-link">
+            <span>📊</span>
+            <span>BlueMart Analytics</span>
+          </a>
+        </li>
+        <li class="project-nav-item">
+          <a href="#homevista" class="project-nav-link">
+            <span>🏠</span>
+            <span>HomeVista AI</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <!-- BlueMart Featured Project -->
-    <section class="glass-panel scroll-reveal" style="padding: 3rem 2rem;">
+    <section id="bluemart" class="glass-panel scroll-reveal" style="padding: 3rem 2rem; scroll-margin-top: 150px;">
       <div style="text-align: center; margin-bottom: 2rem;">
         <h2 style="color: var(--accent-cyan); font-size: 2.5rem; margin-bottom: 1rem;">BlueMart Retail Analytics</h2>
         <p style="color: var(--text-primary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
@@ -269,23 +360,10 @@
         </a>
         <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 2rem;">
           💬 Discuss This Project
-        </a>
-      </div>
-    </section>
-
-    <!-- HomeVista Project -->
-    <section class="glass-panel scroll-reveal"
-      style="padding: 3rem 2rem; margin-top: 5rem; border-top: 3px solid rgba(0, 224, 255, 0.3);">
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <div class="featured-tag" style="background: linear-gradient(135deg, #00ffa3 0%, #00e0ff 100%);">🚀 LIVE
-          DEPLOYMENT</div>
-        <h2 style="color: var(--accent-cyan); font-size: 2.5rem; margin-bottom: 1rem;">HomeVista: Dubai Rental
-          Intelligence</h2>
-        <p style="color: var(--text-primary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
           AI-Powered Price Prediction with <strong>99.7% Accuracy</strong>
-        </p>
-        <img src="assets/images/homevista.png" alt="HomeVista Dashboard"
-          style="width: 100%; max-width: 900px; margin-top: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 255, 163, 0.2);">
+          </p>
+          <img src="assets/images/homevista.png" alt="HomeVista Dashboard"
+            style="width: 100%; max-width: 900px; margin-top: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 255, 163, 0.2);">
       </div>
 
       <!-- Description -->
