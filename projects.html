@@ -137,43 +137,24 @@
     <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
       <h1 class="text-gradient mb-sm">Portfolio Projects</h1>
       <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
-        Transforming complex retail data into strategic business intelligence through analytics, automation, and AI.
-      </p>
-    </section>
-
-    <!-- BlueMart Featured Project -->
-    <section class="glass-panel scroll-reveal" style="padding: 3rem 2rem;">
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <div class="featured-tag">🎯 FEATURED PROJECT</div>
-        <h2 style="color: var(--accent-cyan); font-size: 2.5rem; margin-bottom: 1rem;">BlueMart Retail Analytics</h2>
-        <p style="color: var(--text-primary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-          End-to-end retail intelligence system analyzing <strong>AED 896.4M</strong> in omnichannel revenue across 50
-          stores
-        </p>
+      <div class="metric-label">Total Revenue Analyzed</div>
       </div>
-
-      <!-- Key Metrics -->
-      <div class="metrics-grid">
-        <div class="metric-card scroll-reveal">
-          <div class="metric-value">AED 896M</div>
-          <div class="metric-label">Total Revenue Analyzed</div>
-        </div>
-        <div class="metric-card scroll-reveal">
-          <div class="metric-value">50</div>
-          <div class="metric-label">Retail Locations</div>
-        </div>
-        <div class="metric-card scroll-reveal">
-          <div class="metric-value">5,000</div>
-          <div class="metric-label">SKUs Tracked</div>
-        </div>
-        <div class="metric-card scroll-reveal">
-          <div class="metric-value">30%</div>
-          <div class="metric-label">Gross Margin</div>
-        </div>
-        <div class="metric-card scroll-reveal">
-          <div class="metric-value">2-5M</div>
-          <div class="metric-label">Annual Transactions</div>
-        </div>
+      <div class="metric-card scroll-reveal">
+        <div class="metric-value">50</div>
+        <div class="metric-label">Retail Locations</div>
+      </div>
+      <div class="metric-card scroll-reveal">
+        <div class="metric-value">5,000</div>
+        <div class="metric-label">SKUs Tracked</div>
+      </div>
+      <div class="metric-card scroll-reveal">
+        <div class="metric-value">30%</div>
+        <div class="metric-label">Gross Margin</div>
+      </div>
+      <div class="metric-card scroll-reveal">
+        <div class="metric-value">2-5M</div>
+        <div class="metric-label">Annual Transactions</div>
+      </div>
       </div>
 
       <!-- Business Challenge -->
@@ -267,61 +248,42 @@
           📁 View Full Project on GitHub
         </a>
         <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 2rem;">
-          💬 Discuss This Project
-        </a>
-      </div>
-    </section>
+          </footer>
 
-    <!-- Coming Soon -->
-    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 3rem 2rem; margin-top: 3rem;">
-      <h2 style="color: var(--text-heading); margin-bottom: 1rem;">More Projects Coming Soon</h2>
-      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.8;">
-        Currently developing <strong>HomeVista</strong> — a UAE rental market analytics system for price prediction and
-        market segmentation.
-        New case studies will be published as I complete them.
-      </p>
-    </section>
-  </main>
+          <!-- Scripts -->
+          <script>
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Amir Khan. All rights reserved.</p>
-  </footer>
+            if (menuToggle) {
+              menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+              });
 
-  <!-- Scripts -->
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
+              document.querySelectorAll('#navMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                  navMenu.classList.remove('active');
+                });
+              });
+            }
 
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
+            const observerOptions = {
+              threshold: 0.1,
+              rootMargin: '0px 0px -50px 0px'
+            };
 
-      document.querySelectorAll('#navMenu a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('active');
-        });
-      });
-    }
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('revealed');
+                }
+              });
+            }, observerOptions);
 
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.scroll-reveal').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+              observer.observe(el);
+            });
+          </script>
 </body>
 
 </html>
