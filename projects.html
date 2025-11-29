@@ -137,42 +137,191 @@
     <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
       <h1 class="text-gradient mb-sm">Portfolio Projects</h1>
       <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
-        </footer>
+        Transforming complex retail data into strategic business intelligence through analytics, automation, and AI.
+      </p>
+    </section>
 
-        <!-- Scripts -->
-        <script>
-          const menuToggle = document.getElementById('menuToggle');
-          const navMenu = document.getElementById('navMenu');
+    <!-- BlueMart Featured Project -->
+    <section class="glass-panel scroll-reveal" style="padding: 3rem 2rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="featured-tag">🎯 FEATURED PROJECT</div>
+        <h2 style="color: var(--accent-cyan); font-size: 2.5rem; margin-bottom: 1rem;">BlueMart Retail Analytics</h2>
+        <p style="color: var(--text-primary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+          End-to-end retail intelligence system analyzing <strong>AED 896.4M</strong> in omnichannel revenue across 50
+          stores
+        </p>
+      </div>
 
-          if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
+      <!-- Key Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">AED 896M</div>
+          <div class="metric-label">Total Revenue Analyzed</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">50</div>
+          <div class="metric-label">Retail Locations</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">5,000</div>
+          <div class="metric-label">SKUs Tracked</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">30%</div>
+          <div class="metric-label">Gross Margin</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">2-5M</div>
+          <div class="metric-label">Annual Transactions</div>
+        </div>
+      </div>
 
-            document.querySelectorAll('#navMenu a').forEach(link => {
-              link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-              });
-            });
-          }
+      <!-- Business Challenge -->
+      <div style="margin: 3rem 0;">
+        <h3 style="color: var(--text-heading); font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">Business
+          Challenge</h3>
+        <p
+          style="color: var(--text-secondary); max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: center;">
+          Mid-sized retailers struggle with <strong>inventory optimization</strong>, <strong>demand
+            forecasting</strong>, and <strong>omnichannel coordination</strong>.
+          I built a realistic synthetic dataset to simulate these challenges and develop data-driven solutions that
+          translate directly to real-world retail operations.
+        </p>
+      </div>
 
-          const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-          };
+      <!-- Key Insights -->
+      <div style="margin: 3rem 0;">
+        <h3 style="color: var(--text-heading); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Strategic
+          Insights Delivered</h3>
+        <div class="insights-grid">
+          <div class="insight-card scroll-reveal">
+            <h3>📊 Revenue Driver Identified</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Electronics category generates <strong>46.5% of total revenue</strong> (AED 416.8M) while maintaining
+              consistent 30% margins — primary profit driver.
+            </p>
+          </div>
+          <div class="insight-card scroll-reveal">
+            <h3>🏪 Omnichannel Balance</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Physical stores: <strong>50% revenue</strong> | Digital channels: <strong>40%</strong> | Marketplaces:
+              <strong>10%</strong> — validating multi-channel investment strategy.
+            </p>
+          </div>
+          <div class="insight-card scroll-reveal">
+            <h3>📈 Peak Performance</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              July Summer Sale generated <strong>AED 105.3M</strong> — highest monthly revenue, driven by Personal Care
+              (+50%) and Beverages (+40%) demand.
+            </p>
+          </div>
+          <div class="insight-card scroll-reveal">
+            <h3>🎯 Market Concentration</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Dubai accounts for <strong>56% of revenue</strong> (AED 501.8M) — strong market presence with expansion
+              opportunities in Abu Dhabi and Sharjah.
+            </p>
+          </div>
+        </div>
+      </div>
 
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-              }
-            });
-          }, observerOptions);
+      <!-- Technology Stack -->
+      <div style="margin: 3rem 0; text-align: center;">
+        <h3 style="color: var(--text-heading); font-size: 1.5rem; margin-bottom: 1.5rem;">Technology Stack</h3>
+        <div class="tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Streamlit</span>
+          <span class="tech-badge">Plotly</span>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">Seaborn</span>
+          <span class="tech-badge">Faker</span>
+          <span class="tech-badge">Git</span>
+        </div>
+      </div>
 
-          document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
-          });
-        </script>
+      <!-- Strategic Recommendations Preview -->
+      <div
+        style="margin: 3rem 0; background: rgba(0, 224, 255, 0.05); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 224, 255, 0.2);">
+        <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 1rem; text-align: center;">Strategic
+          Recommendations</h3>
+        <div style="max-width: 800px; margin: 0 auto;">
+          <ul style="color: var(--text-primary); line-height: 2; list-style-position: inside;">
+            <li><strong>Mobile App Growth:</strong> Target 15% → 20% revenue share through app-exclusive flash sales on
+              high-margin Electronics</li>
+            <li><strong>Marketplace Expansion:</strong> Expand Amazon.ae SKU range to 7,500, focusing on Personal Care
+              and Snacks (higher margins)</li>
+            <li><strong>Geographic Expansion:</strong> Open 3 new stores in Dubai (Dubai Marina, JBR, Business Bay) —
+              Expected +AED 45M annual revenue</li>
+            <li><strong>Private Label Strategy:</strong> Launch "BlueMart Essentials" in Household — Target 45% margins
+              vs 30% branded</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Call to Actions -->
+      <div class="cta-group">
+        <a href="https://github.com/Amir-Analyst/bluemart" target="_blank" class="btn btn-primary"
+          style="padding: 1rem 2rem;">
+          📁 View Full Project on GitHub
+        </a>
+        <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 2rem;">
+          💬 Discuss This Project
+        </a>
+      </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="glass-panel scroll-reveal" style="text-align: center; padding: 3rem 2rem; margin-top: 3rem;">
+      <h2 style="color: var(--text-heading); margin-bottom: 1rem;">More Projects Coming Soon</h2>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.8;">
+        Currently developing <strong>HomeVista</strong> — a UAE rental market analytics system for price prediction and
+        market segmentation.
+        New case studies will be published as I complete them.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Amir Khan. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 
 </html>
