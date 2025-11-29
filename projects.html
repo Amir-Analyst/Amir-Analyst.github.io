@@ -45,18 +45,6 @@
       border-color: var(--accent-cyan);
       transform: translateY(-4px);
       box-shadow: 0 8px 24px rgba(0, 224, 255, 0.15);
-    }
-
-    .metric-value {
-      font-size: 2rem;
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
-    }
-
-    .metric-label {
       color: var(--text-secondary);
       font-size: 0.9rem;
       text-transform: uppercase;
@@ -443,39 +431,18 @@
     <p>&copy; 2024 Amir Khan. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
 
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+  if (entry.isIntersecting) {
+  entry.target.classList.add('revealed');
+  }
+  });
+  }, observerOptions);
 
-      document.querySelectorAll('#navMenu a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('active');
-        });
-      });
-    }
-
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.scroll-reveal').forEach(el => {
-      observer.observe(el);
-    });
+  document.querySelectorAll('.scroll-reveal').forEach(el => {
+  observer.observe(el);
+  });
   </script>
 </body>
 
