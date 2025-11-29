@@ -137,24 +137,45 @@
     <section class="glass-panel scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
       <h1 class="text-gradient mb-sm">Portfolio Projects</h1>
       <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">
-      <div class="metric-label">Total Revenue Analyzed</div>
+        Transforming complex retail data into strategic business intelligence through analytics, automation, and AI.
+      </p>
+    </section>
+
+    <!-- BlueMart Featured Project -->
+    <section class="glass-panel scroll-reveal" style="padding: 3rem 2rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="featured-tag">🎯 FEATURED PROJECT</div>
+        <h2 style="color: var(--accent-cyan); font-size: 2.5rem; margin-bottom: 1rem;">BlueMart Retail Analytics</h2>
+        <p style="color: var(--text-primary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+          End-to-end retail intelligence system analyzing <strong>AED 896.4M</strong> in omnichannel revenue across 50
+          stores
+        </p>
+        <img src="assets/images/bluemart.png" alt="BlueMart Dashboard"
+          style="width: 100%; max-width: 900px; margin-top: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 224, 255, 0.2);">
       </div>
-      <div class="metric-card scroll-reveal">
-        <div class="metric-value">50</div>
-        <div class="metric-label">Retail Locations</div>
-      </div>
-      <div class="metric-card scroll-reveal">
-        <div class="metric-value">5,000</div>
-        <div class="metric-label">SKUs Tracked</div>
-      </div>
-      <div class="metric-card scroll-reveal">
-        <div class="metric-value">30%</div>
-        <div class="metric-label">Gross Margin</div>
-      </div>
-      <div class="metric-card scroll-reveal">
-        <div class="metric-value">2-5M</div>
-        <div class="metric-label">Annual Transactions</div>
-      </div>
+
+      <!-- Key Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">AED 896M</div>
+          <div class="metric-label">Total Revenue Analyzed</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">50</div>
+          <div class="metric-label">Retail Locations</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">5,000</div>
+          <div class="metric-label">SKUs Tracked</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">30%</div>
+          <div class="metric-label">Gross Margin</div>
+        </div>
+        <div class="metric-card scroll-reveal">
+          <div class="metric-value">2-5M</div>
+          <div class="metric-label">Annual Transactions</div>
+        </div>
       </div>
 
       <!-- Business Challenge -->
@@ -248,42 +269,123 @@
           📁 View Full Project on GitHub
         </a>
         <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 2rem;">
-          </footer>
+          💬 Discuss This Project
+        </a>
+      </div>
+    </section>
 
-          <!-- Scripts -->
-          <script>
-            const menuToggle = document.getElementById('menuToggle');
-            const navMenu = document.getElementById('navMenu');
+    <!-- HomeVista Project -->
+    <section class="glass-panel scroll-reveal" style="padding: 3rem 2rem; margin-top: 3rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="featured-tag" style="background: linear-gradient(135deg, #00ffa3 0%, #00e0ff 100%);">🚀 LIVE
+          DEPLOYMENT</div>
+        <h2 style="color: var(--accent-cyan); font-size: 2.5rem; margin-bottom: 1rem;">HomeVista: Dubai Rental
+          Intelligence</h2>
+        <p style="color: var(--text-primary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+          AI-Powered Price Prediction with <strong>99.7% Accuracy</strong>
+        </p>
+        <img src="assets/images/homevista.png" alt="HomeVista Dashboard"
+          style="width: 100%; max-width: 900px; margin-top: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(0, 255, 163, 0.2);">
+      </div>
 
-            if (menuToggle) {
-              menuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-              });
+      <!-- Description -->
+      <div style="margin: 3rem 0;">
+        <p
+          style="color: var(--text-secondary); max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: center; font-size: 1.1rem;">
+          Dubai's rental market is opaque and volatile. I built an end-to-end AI platform that predicts fair rental
+          prices with <strong>99.7% accuracy</strong>, empowering tenants and landlords with instant, data-driven
+          valuations.
+        </p>
+      </div>
 
-              document.querySelectorAll('#navMenu a').forEach(link => {
-                link.addEventListener('click', () => {
-                  navMenu.classList.remove('active');
-                });
-              });
-            }
+      <!-- Key Features -->
+      <div class="insights-grid">
+        <div class="insight-card scroll-reveal">
+          <h3>✅ 99.7% Accuracy</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;">
+            Ensemble model combining XGBoost, LightGBM, and CatBoost for precision pricing.
+          </p>
+        </div>
+        <div class="insight-card scroll-reveal">
+          <h3>📊 16,000+ Listings</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;">
+            Trained on hybrid dataset of real and synthetic market data representing Dubai's diverse property landscape.
+          </p>
+        </div>
+        <div class="insight-card scroll-reveal">
+          <h3>💻 Live Dashboard</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;">
+            Interactive tools for Tenants, Landlords, and Investors to explore market trends in real-time.
+          </p>
+        </div>
+      </div>
 
-            const observerOptions = {
-              threshold: 0.1,
-              rootMargin: '0px 0px -50px 0px'
-            };
+      <!-- Tech Stack -->
+      <div style="margin: 3rem 0; text-align: center;">
+        <h3 style="color: var(--text-heading); font-size: 1.5rem; margin-bottom: 1.5rem;">Technology Stack</h3>
+        <div class="tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">XGBoost</span>
+          <span class="tech-badge">LightGBM</span>
+          <span class="tech-badge">CatBoost</span>
+          <span class="tech-badge">Streamlit</span>
+          <span class="tech-badge">Plotly</span>
+        </div>
+      </div>
 
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('revealed');
-                }
-              });
-            }, observerOptions);
+      <!-- Links -->
+      <div class="cta-group">
+        <a href="https://homevista-realestate.streamlit.app" target="_blank" class="btn btn-primary"
+          style="padding: 1rem 2rem;">
+          🚀 Live Demo
+        </a>
+        <a href="https://github.com/Amir-Analyst/HomeVista_RealEstate" target="_blank" class="btn btn-secondary"
+          style="padding: 1rem 2rem;">
+          📁 GitHub Repository
+        </a>
+      </div>
+    </section>
+  </main>
 
-            document.querySelectorAll('.scroll-reveal').forEach(el => {
-              observer.observe(el);
-            });
-          </script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Amir Khan. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 
 </html>
