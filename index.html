@@ -116,15 +116,14 @@
 
         <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 1rem;">
           <span style="color: var(--text-heading);">Hey, I'm</span>
-          <span class="text-gradient">Amir Khan</span>
+          <span class="text-gradient">Amir</span>
         </h1>
         <h2 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem;">
           The Practical Analyst
         </h2>
         <p style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
-          I bridge <strong>10+ years of operations experience</strong> with <strong>AI-augmented analytics</strong>
-          to solve real business problems. I don't just analyze data — I've lived the operational challenges I now solve
-          with code.
+          "Data without context is just noise. With 10+ years of operational experience in retail and supply chain, I
+          don't just analyze numbers—I understand the business reality behind them."
         </p>
 
         <!-- Value Badges -->
@@ -177,10 +176,10 @@
         <div class="pillar-card scroll-reveal">
           <div class="featured-tag">FEATURED</div>
           <h3 style="color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 1rem;">The Work</h3>
-          <h4 style="color: var(--text-heading); margin-bottom: 0.75rem;">BlueMart Retail Analytics</h4>
+          <h4 style="color: var(--text-heading); margin-bottom: 0.75rem;">HomeVista: Dubai Rental Intelligence</h4>
           <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-            End-to-end retail intelligence analyzing <strong>AED 896M revenue</strong> across 50 stores.
-            From data generation to interactive dashboards — a complete analytics product.
+            AI-powered rental price prediction with <strong>99.7% accuracy</strong>. XGBoost ensemble trained on 16,000+
+            Dubai listings—live on Streamlit. Also built <strong>BlueMart</strong>: AED 896M retail analytics system.
           </p>
           <a href="projects.html" class="btn btn-primary" style="width: 100%;">View Full Project</a>
         </div>
@@ -200,11 +199,10 @@
         <!-- The Story (About) -->
         <div class="pillar-card scroll-reveal">
           <h3 style="color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 1rem;">The Story</h3>
-          <h4 style="color: var(--text-heading); margin-bottom: 0.75rem;">From Field Sales to Data Science</h4>
+          <h4 style="color: var(--text-heading); margin-bottom: 0.75rem;">From Operations to Analytics</h4>
           <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-            <strong>108% sales performance</strong> in India → <strong>6-pharmacy purchasing</strong> in Dubai →
-            Self-taught analytics transition. I've lived on both sides: the operations floor and the analytics
-            dashboard.
+            I spent over a decade on the operational floor—managing inventory for 36+ pharmacies. When I transitioned to
+            analytics, I realized my superpower wasn't just coding—it was <strong>context</strong>.
           </p>
           <a href="about.html" class="btn btn-secondary" style="width: 100%;">Read My Journey</a>
         </div>
@@ -249,16 +247,16 @@
     }
 
     const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-  if (entry.isIntersecting) {
-  entry.target.classList.add('revealed');
-  }
-  });
-  }, observerOptions);
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
 
-  document.querySelectorAll('.scroll-reveal').forEach(el => {
-  observer.observe(el);
-  });
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
 
