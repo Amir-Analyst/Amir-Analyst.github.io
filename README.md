@@ -197,5 +197,5 @@ Amir-Analyst.github.io/
 
 ## 🔖 Version History
 
-- **v2.0** (Nov 2024) - Strategic content update, Formspree integration
+- **v2.0** (Nov 2025) - Strategic content update, Formspree integration
 - **v1.0** (Initial) - Portfolio launch with BlueMart project
