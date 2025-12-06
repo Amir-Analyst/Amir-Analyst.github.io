@@ -68,15 +68,15 @@
 
 /* Light mode - Profile image clarity fix */
 [data-theme="light"] .hero-profile-img {
-  filter: none;
-  -webkit-filter: none;
-  backdrop-filter: none;
-  border-color: #0891b2;
-  box-shadow: 0 0 30px rgba(8, 145, 178, 0.25);
+  filter: brightness(1) contrast(0.95) !important;
+  -webkit-filter: brightness(1) contrast(0.95) !important;
+  backdrop-filter: none !important;
+  border-color: #0891b2 !important;
+  box-shadow: 0 0 30px rgba(8, 145, 178, 0.25) !important;
 }
 
 [data-theme="light"] .hero-profile-img:hover {
-  box-shadow: 0 0 40px rgba(8, 145, 178, 0.4);
+  box-shadow: 0 0 40px rgba(8, 145, 178, 0.4) !important;
 }
 
 /* Light mode - Navigation */
@@ -106,6 +106,40 @@
   -webkit-text-fill-color: #000000 !important;
   background-clip: unset !important;
   color: #000000 !important;
+}
+
+/* Light mode - Force ALL text to black/dark colors */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #000000 !important;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] span:not(.badge):not(.skill-tag):not(.value-badges span) {
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] a:not(.btn):not(.social-link) {
+  color: #000000 !important;
+}
+
+/* Light mode - Tabs and interactive elements */
+[data-theme="light"] .tab,
+[data-theme="light"] .tab-link,
+[data-theme="light"] .nav-link {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .tab:hover,
+[data-theme="light"] .tab-link:hover,
+[data-theme="light"] .tab.active,
+[data-theme="light"] .tab-link.active {
+  color: #0891b2 !important;
 }
 
 /* Light mode - Badges */
