@@ -42,37 +42,39 @@
 [data-theme="light"] {
   --bg-primary: #ffffff;
   --bg-panel: rgba(0, 0, 0, 0.02);
-  --text-primary: #1a1a1a;
-  /* Dark grey for body text */
+  --text-primary: #000000;
+  /* Pure black for ALL text */
   --text-heading: #000000;
   /* Pure black for headings */
-  --text-secondary: #333333;
-  /* Dark grey for secondary text */
+  --text-secondary: #000000;
+  /* Pure black for secondary text */
   --accent-cyan: #0891b2;
   --accent-emerald: #059669;
   --gradient-primary: linear-gradient(135deg, #0891b2 0%, #059669 100%);
   --shadow-glow: 0 0 24px rgba(8, 145, 178, 0.2);
 }
 
-/* Light mode adjustments for glass panels */
+/* Light mode adjustments for glass panels - NO white overlay */
 [data-theme="light"] .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: none !important;
 }
 
 [data-theme="light"] .glass-panel:hover {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(8, 145, 178, 0.4);
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(8, 145, 178, 0.4) !important;
 }
 
-/* Light mode - Profile image clarity fix */
+/* Light mode - Profile image - REMOVE white overlay */
 [data-theme="light"] .hero-profile-img {
-  filter: brightness(1) contrast(0.95) !important;
-  -webkit-filter: brightness(1) contrast(0.95) !important;
+  filter: none !important;
+  -webkit-filter: none !important;
   backdrop-filter: none !important;
   border-color: #0891b2 !important;
   box-shadow: 0 0 30px rgba(8, 145, 178, 0.25) !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }
 
 [data-theme="light"] .hero-profile-img:hover {
@@ -108,7 +110,7 @@
   color: #000000 !important;
 }
 
-/* Light mode - Force ALL text to black/dark colors */
+/* Light mode - Force ALL text to PURE BLACK */
 [data-theme="light"] h1,
 [data-theme="light"] h2,
 [data-theme="light"] h3,
@@ -120,11 +122,18 @@
 
 [data-theme="light"] p,
 [data-theme="light"] li,
+[data-theme="light"] div,
 [data-theme="light"] span:not(.badge):not(.skill-tag):not(.value-badges span) {
-  color: #1a1a1a !important;
+  color: #000000 !important;
 }
 
 [data-theme="light"] a:not(.btn):not(.social-link) {
+  color: #000000 !important;
+}
+
+[data-theme="light"] label,
+[data-theme="light"] strong,
+[data-theme="light"] em {
   color: #000000 !important;
 }
 
