@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Theme Verification Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+
+        .test-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid #333;
+            vertical-align: top;
+        }
+
+        .label {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #000000;
+        }
+
+        h2 {
+            color: #1a1a1a;
+        }
+
+        p {
+            color: #333333;
+        }
+
+        .expected {
+            background: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+        }
+
+        .actual {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+        }
+
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Light Theme Verification Guide</h1>
+
+    <div class="test-section">
+        <h2>Expected Colors in Light Mode</h2>
+        <div class="expected">
+            <h3>Text Colors Should Be:</h3>
+            <ul>
+                <li><strong>Headings:</strong> <code>#000000</code> (Pure Black)</li>
+                <li><strong>Body Text:</strong> <code>#1a1a1a</code> (Dark Grey)</li>
+                <li><strong>Secondary Text:</strong> <code>#333333</code> (Medium Dark Grey)</li>
+                <li><strong>Navigation Links:</strong> <code>#000000</code> (Pure Black)</li>
+            </ul>
+        </div>
+
+        <h3>Color Swatches:</h3>
+        <div>
+            <div class="color-box" style="background: #000000;">
+                <span class="label" style="color: white;">#000000<br>Headings</span>
+            </div>
+            <div class="color-box" style="background: #1a1a1a;">
+                <span class="label" style="color: white;">#1a1a1a<br>Body Text</span>
+            </div>
+            <div class="color-box" style="background: #333333;">
+                <span class="label" style="color: white;">#333333<br>Secondary</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>How to Verify Your Website</h2>
+        <div class="actual">
+            <h3>Step-by-Step Instructions:</h3>
+            <ol>
+                <li><strong>Clear Browser Cache:</strong>
+                    <ul>
+                        <li>Press <code>Ctrl + Shift + Delete</code> (Windows) or <code>Cmd + Shift + Delete</code>
+                            (Mac)</li>
+                        <li>Select "Cached images and files"</li>
+                        <li>Click "Clear data"</li>
+                    </ul>
+                </li>
+                <li><strong>Open Your Website:</strong>
+                    <ul>
+                        <li>Navigate to: <code>file:///E:/Work/Amir/antigravity/Amir-Analyst.github.io/index.html</code>
+                        </li>
+                        <li>Or double-click <code>index.html</code> in your file explorer</li>
+                    </ul>
+                </li>
+                <li><strong>Hard Refresh:</strong>
+                    <ul>
+                        <li>Press <code>Ctrl + F5</code> (Windows) or <code>Cmd + Shift + R</code> (Mac)</li>
+                        <li>This forces the browser to reload all CSS files</li>
+                    </ul>
+                </li>
+                <li><strong>Switch to Light Mode:</strong>
+                    <ul>
+                        <li>Click the theme toggle button (bottom-right corner)</li>
+                        <li>The sun/moon icon should switch</li>
+                    </ul>
+                </li>
+                <li><strong>Inspect Elements:</strong>
+                    <ul>
+                        <li>Right-click on a heading → "Inspect"</li>
+                        <li>Check the "Computed" tab</li>
+                        <li>Look for <code>color: rgb(0, 0, 0)</code> (which is #000000)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>What to Check</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background: #f8f9fa;">
+                <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Element</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Expected Color</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">How to Verify</th>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Profile Image</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Sharp & Clear</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Should not appear blurry</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Page Headings (h1, h2)</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">#000000 (Black)</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Should be pure black, not blue</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Navigation Links</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">#000000 (Black)</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Should be black, not blue</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Body Text</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">#1a1a1a (Dark Grey)</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Should be very dark grey</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">Badges</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">#0891b2 (Cyan)</td>
+                <td style="padding: 12px; border: 1px solid #dee2e6;">These should still be cyan/blue</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="test-section">
+        <h2>Troubleshooting</h2>
+        <div style="background: #f8d7da; padding: 15px; border-left: 4px solid #dc3545;">
+            <h3>If colors are still wrong:</h3>
+            <ol>
+                <li><strong>Check if you're in light mode:</strong> The toggle button should show a sun icon</li>
+                <li><strong>Try a different browser:</strong> Test in Chrome, Firefox, or Edge</li>
+                <li><strong>Check browser console:</strong> Press F12, look for CSS errors</li>
+                <li><strong>Verify CSS file:</strong> Open <code>assets/css/style.css</code> and search for:
+                    <pre style="background: white; padding: 10px; margin: 10px 0;">--text-primary: #1a1a1a;</pre>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>CSS Variables to Verify</h2>
+        <div style="background: #e7f3ff; padding: 15px; border-left: 4px solid #0891b2;">
+            <p>Open <code>assets/css/style.css</code> and find the <code>[data-theme="light"]</code> section (around
+                line 42).</p>
+            <p>It should contain:</p>
+            <pre style="background: white; padding: 15px; margin: 10px 0; overflow-x: auto;">
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --text-primary: #1a1a1a;        /* Dark grey for body text */
+  --text-heading: #000000;        /* Pure black for headings */
+  --text-secondary: #333333;      /* Dark grey for secondary text */
+  --accent-cyan: #0891b2;
+  ...
+}</pre>
+        </div>
+    </div>
+</body>
+
+</html>

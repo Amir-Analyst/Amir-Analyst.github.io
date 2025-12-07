@@ -1,25 +1,25 @@
-// Theme Toggle Functionality
+// Theme Toggle Functionality 
 (function () {
     const themeToggle = document.getElementById('themeToggle');
     const htmlElement = document.documentElement;
 
-    // Get saved theme from localStorage or default to 'dark'
+    // Load saved theme or default to 'dark'
     const savedTheme = localStorage.getItem('theme') || 'dark';
 
-    // Apply saved theme on page load
+    // Apply theme on page load
     htmlElement.setAttribute('data-theme', savedTheme);
 
-    // Toggle theme on button click
+    // Toggle theme on click
     if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
+        themeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-            // Apply new theme
             htmlElement.setAttribute('data-theme', newTheme);
-
-            // Save to localStorage
             localStorage.setItem('theme', newTheme);
+
+            // Optional: Notify other JS parts
+            document.dispatchEvent(new CustomEvent("themeChanged", { detail: newTheme }));
         });
     }
 })();

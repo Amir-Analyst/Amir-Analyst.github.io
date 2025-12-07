@@ -54,16 +54,37 @@
   --shadow-glow: 0 0 24px rgba(8, 145, 178, 0.2);
 }
 
-/* Light mode adjustments for glass panels - NO white overlay */
+/* Light mode - COMPLETELY DISABLE glass-panel effects */
 [data-theme="light"] .glass-panel {
-  background: rgba(255, 255, 255, 0.7) !important;
-  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  background: none !important;
   backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: var(--spacing-lg) !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 [data-theme="light"] .glass-panel:hover {
-  background: rgba(255, 255, 255, 0.85) !important;
-  border-color: rgba(8, 145, 178, 0.4) !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Light mode - CRITICAL: Ensure sections have NO glass effects */
+[data-theme="light"] section.glass-panel,
+[data-theme="light"] section {
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+}
+
+[data-theme="light"] section.glass-panel:hover,
+[data-theme="light"] section:hover {
+  background: none !important;
 }
 
 /* Light mode - Profile image - REMOVE white overlay */
@@ -290,13 +311,13 @@
   border: 1px solid rgba(8, 145, 178, 0.2);
 }
 
-/* Light mode - Scroll reveal animation */
+/* Light mode - Scroll reveal animation - FIX: Remove opacity that causes white overlay */
 [data-theme="light"] .scroll-reveal {
-  opacity: 0.7;
+  opacity: 1 !important;
 }
 
 [data-theme="light"] .scroll-reveal.revealed {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 /* Typography */
